@@ -1,0 +1,29 @@
+# Arquivos de Build e Compilação
+# Geralmente os diretórios 'Debug' e/ou 'Release'
+Debug/
+Release/
+build/
+
+# Arquivos gerados pelo compilador
+*.o
+*.elf
+*.map
+*.list
+*.su
+*.d
+
+# Arquivos de configuração do usuário do STM32CubeIDE
+# Eles guardam configurações locais do seu PC e não devem ser compartilhados
+.settings/
+.mxproject
+
+# Arquivos do gerenciador de dependências do CubeIDE
+*.part
+
+# Arquivos de backup do editor
+*~
+*.swp
+*.swo
+
+# Arquivos gerados pelo Eclipse/CDT (base do CubeIDE)
+.metadata
