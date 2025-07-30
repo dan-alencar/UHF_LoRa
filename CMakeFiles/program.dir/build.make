@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master
+CMAKE_SOURCE_DIR = /home/danilo-alencar/Documents/GitHub/UHF_LoRa
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master
+CMAKE_BINARY_DIR = /home/danilo-alencar/Documents/GitHub/UHF_LoRa
 
 # Utility rule file for program.
 
@@ -71,9 +71,9 @@ CMakeFiles/program: if
 CMakeFiles/program: (
 CMakeFiles/program: UNIX
 CMakeFiles/program: )
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "flashing /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/RS41HUP.bin"
-	st-flash --reset write /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/RS41HUP.bin 0x08000000 else ( )
-	D:/Programy/stlink-1.3.0-win64/bin/st-flash --reset write /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/RS41HUP.bin 0x08000000 endif ( )
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/danilo-alencar/Documents/GitHub/UHF_LoRa/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "flashing /home/danilo-alencar/Documents/GitHub/UHF_LoRa/RS41HUP.bin"
+	st-flash --reset write /home/danilo-alencar/Documents/GitHub/UHF_LoRa/RS41HUP.bin 0x08000000 else ( )
+	D:/Programy/stlink-1.3.0-win64/bin/st-flash --reset write /home/danilo-alencar/Documents/GitHub/UHF_LoRa/RS41HUP.bin 0x08000000 endif ( )
 
 program: CMakeFiles/program
 program: CMakeFiles/program.dir/build.make
@@ -88,6 +88,6 @@ CMakeFiles/program.dir/clean:
 .PHONY : CMakeFiles/program.dir/clean
 
 CMakeFiles/program.dir/depend:
-	cd /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/CMakeFiles/program.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/danilo-alencar/Documents/GitHub/UHF_LoRa && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/danilo-alencar/Documents/GitHub/UHF_LoRa /home/danilo-alencar/Documents/GitHub/UHF_LoRa /home/danilo-alencar/Documents/GitHub/UHF_LoRa /home/danilo-alencar/Documents/GitHub/UHF_LoRa /home/danilo-alencar/Documents/GitHub/UHF_LoRa/CMakeFiles/program.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/program.dir/depend
 

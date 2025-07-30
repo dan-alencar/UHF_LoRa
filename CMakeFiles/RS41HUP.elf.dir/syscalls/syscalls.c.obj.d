@@ -1,5 +1,5 @@
 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj: \
- /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/syscalls/syscalls.c \
+ /home/danilo-alencar/Documents/GitHub/UHF_LoRa/syscalls/syscalls.c \
  /usr/include/newlib/stdio.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
  /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \

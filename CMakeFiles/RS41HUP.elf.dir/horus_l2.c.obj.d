@@ -1,5 +1,5 @@
 CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj: \
- /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/horus_l2.c \
+ /home/danilo-alencar/Documents/GitHub/UHF_LoRa/horus_l2.c \
  /usr/include/newlib/assert.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
  /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
@@ -16,4 +16,4 @@ CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj: \
  /usr/include/newlib/sys/_locale.h /usr/include/newlib/strings.h \
  /usr/include/newlib/sys/string.h \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
- /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/horus_l2.h
+ /home/danilo-alencar/Documents/GitHub/UHF_LoRa/horus_l2.h
