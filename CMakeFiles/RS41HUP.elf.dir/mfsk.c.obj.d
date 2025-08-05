@@ -1,5 +1,5 @@
 CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj: \
- /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/mfsk.c \
+ /home/danilo-alencar/Documents/GitHub/UHF_LoRa/mfsk.c \
  /usr/include/newlib/stdio.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
  /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
@@ -11,4 +11,4 @@ CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj: \
  /usr/include/newlib/sys/_types.h /usr/include/newlib/machine/_types.h \
  /usr/include/newlib/sys/lock.h /usr/include/newlib/sys/stdio.h \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
- /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/mfsk.h
+ /home/danilo-alencar/Documents/GitHub/UHF_LoRa/mfsk.h

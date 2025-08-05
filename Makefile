@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master
+CMAKE_SOURCE_DIR = /home/danilo-alencar/Documents/GitHub/UHF_LoRa
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master
+CMAKE_BINARY_DIR = /home/danilo-alencar/Documents/GitHub/UHF_LoRa
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/CMakeFiles /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danilo-alencar/Documents/GitHub/UHF_LoRa/CMakeFiles /home/danilo-alencar/Documents/GitHub/UHF_LoRa//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danilo-alencar/Documents/GitHub/UHF_LoRa/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
