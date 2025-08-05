@@ -32,8 +32,8 @@
 //#define MFSKDEBUG 1
 
 // IO Pins Definitions. The state of these pins are initialized in init.c
-#define GREEN  GPIO_Pin_8 // Inverted
-#define RED  GPIO_Pin_7 // Non-Inverted (?)
+#define GREEN  GPIO_Pin_7 // Inverted
+#define RED  GPIO_Pin_8 // Non-Inverted (?)
 
 
 // Transmit Modulation Switching
@@ -513,7 +513,7 @@ int main(void) {
   ublox_init();
 
   led_red_on();
-  led_green_on();
+  led_green_off();
   USART_SendData(USART3, 0xc);
 
   radio_soft_reset();

@@ -1,4 +1,4 @@
-# Install script for directory: /home/danilo-alencar/Documents/GitHub/UHF_LoRa
+# Install script for directory: /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/danilo-alencar/Documents/GitHub/UHF_LoRa/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

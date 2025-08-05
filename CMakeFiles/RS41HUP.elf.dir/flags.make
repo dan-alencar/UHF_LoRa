@@ -5,13 +5,13 @@
 # compile CXX with /bin/arm-none-eabi-g++
 C_DEFINES = -DSTM32F100C8 -DSTM32F10X_MD_VL -DSUPPORT_CPLUSPLUS -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__
 
-C_INCLUDES = -I/home/danilo-alencar/Documents/GitHub/UHF_LoRa/cmsis -I/home/danilo-alencar/Documents/GitHub/UHF_LoRa/cmsis_boot -I/home/danilo-alencar/Documents/GitHub/UHF_LoRa/stm_lib/inc -I/home/danilo-alencar/Documents/GitHub/UHF_LoRa/.
+C_INCLUDES = -I/home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/cmsis -I/home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/cmsis_boot -I/home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/stm_lib/inc -I/home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/.
 
 C_FLAGS =  -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O3 -g -nostartfiles  -std=gnu99
 
 CXX_DEFINES = -DSTM32F100C8 -DSTM32F10X_MD_VL -DSUPPORT_CPLUSPLUS -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__
 
-CXX_INCLUDES = -I/home/danilo-alencar/Documents/GitHub/UHF_LoRa/cmsis -I/home/danilo-alencar/Documents/GitHub/UHF_LoRa/cmsis_boot -I/home/danilo-alencar/Documents/GitHub/UHF_LoRa/stm_lib/inc -I/home/danilo-alencar/Documents/GitHub/UHF_LoRa/.
+CXX_INCLUDES = -I/home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/cmsis -I/home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/cmsis_boot -I/home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/stm_lib/inc -I/home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/.
 
 CXX_FLAGS =  -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O3 -g -nostartfiles  -std=c++11
 

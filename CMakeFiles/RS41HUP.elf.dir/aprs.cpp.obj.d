@@ -1,5 +1,5 @@
 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj: \
- /home/danilo-alencar/Documents/GitHub/UHF_LoRa/aprs.cpp \
+ /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/aprs.cpp \
  /usr/include/newlib/c++/13.2.1/math.h \
  /usr/include/newlib/c++/13.2.1/cmath \
  /usr/include/newlib/c++/13.2.1/bits/requires_hosted.h \
@@ -20,14 +20,14 @@ CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj: \
  /usr/include/newlib/c++/13.2.1/bits/std_abs.h \
  /usr/include/newlib/c++/13.2.1/stdlib.h /usr/include/newlib/stdlib.h \
  /usr/include/newlib/machine/stdlib.h \
- /home/danilo-alencar/Documents/GitHub/UHF_LoRa/aprs.h \
+ /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/aprs.h \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
  /usr/include/newlib/c++/13.2.1/cstdlib \
- /home/danilo-alencar/Documents/GitHub/UHF_LoRa/ublox.h \
- /home/danilo-alencar/Documents/GitHub/UHF_LoRa/QAPRSBase.h \
- /home/danilo-alencar/Documents/GitHub/UHF_LoRa/QAPRSCommon.h \
+ /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/ublox.h \
+ /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/QAPRSBase.h \
+ /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/QAPRSCommon.h \
  /usr/include/newlib/string.h /usr/include/newlib/sys/string.h \
  /usr/include/newlib/stdio.h \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
  /usr/include/newlib/sys/stdio.h \
- /home/danilo-alencar/Documents/GitHub/UHF_LoRa/config.h
+ /home/danilo-alencar/Documents/GitHub/RS41HUP_V2-master/config.h

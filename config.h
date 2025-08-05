@@ -139,7 +139,7 @@
 // Recommendation:  request for reboot after 7 Minutes if TX_DELAY 60s : = 420 Seconds * 1000 (ms) / TX_DELAY (ms) - round to integer please
 // if TX_DELAY smaller, make NOGPS_RESET_AFTER_TXCOUNT bigger
 //================================================
-#define NOGPS_RESET_AFTER_TXCOUNT 7
+#define NOGPS_RESET_AFTER_TXCOUNT 1  //tá contando 1m03s por minuto ?
 //================================================
 
 // Delay *between* transmitted packets (milliseconds)
