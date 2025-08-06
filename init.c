@@ -25,9 +25,9 @@ DMA_InitTypeDef DMA_InitStructure;
 #endif
 void init_usart_gps(const uint32_t speed, const uint8_t enable_irq) {
   NVIC_DisableIRQ(USART1_IRQn);
-	USART_ITConfig(USART1, USART_IT_RXNE, DISABLE);
-	USART_ClearITPendingBit(USART1, USART_IT_RXNE);
-	USART_ClearITPendingBit(USART1, USART_IT_ORE);
+  USART_ITConfig(USART1, USART_IT_RXNE, DISABLE);
+  USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+  USART_ClearITPendingBit(USART1, USART_IT_ORE);
 
   USART_Cmd(USART1, DISABLE);
 
@@ -56,6 +56,9 @@ void init_usart_gps(const uint32_t speed, const uint8_t enable_irq) {
 
 void init_usart_debug() {
   NVIC_DisableIRQ(USART3_IRQn);
+  USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
+  USART_ClearITPendingBit(USART3, USART_IT_RXNE);
+  USART_ClearITPendingBit(USART3, USART_IT_ORE);
   USART_Cmd(USART3, DISABLE);
 
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
@@ -66,7 +69,19 @@ void init_usart_debug() {
   USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
   USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
   USART_Init(USART3, &USART_InitStructure);
+
+  NVIC_InitTypeDef NVIC_InitStructure;
+  // Habilita a interrupção da USART3
+  NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+  NVIC_Init(&NVIC_InitStructure);
+
+  // Habilita a interrupção de "dado recebido" (RXNE)
   USART_Cmd(USART3, ENABLE);
+  USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
+  NVIC_EnableIRQ(USART3_IRQn);
 }
 
 void NVIC_Conf()

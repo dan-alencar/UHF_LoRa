@@ -36,6 +36,10 @@
 #define GREEN  GPIO_Pin_7 // Inverted
 #define RED  GPIO_Pin_8 // Non-Inverted (?)
 
+#define CMD_SYNC_WORD           0xAA
+#define CMD_WRITE               0x02
+#define PARAM_DEEP_SLEEP_INTERVAL 0x10
+#define RX_BUFFER_SIZE 32
 
 // Transmit Modulation Switching
 #define STARTUP 0
@@ -44,6 +48,22 @@
 #define FSK_2 3
 #define APRS 4
 #define LORA 5
+
+extern volatile uint32_t deep_sleep_interval_seconds;
+uint8_t rx_buffer[RX_BUFFER_SIZE];
+uint8_t rx_byte_count = 0;
+uint8_t expected_payload_len = 0;
+
+typedef enum {
+    PARSER_AWAITING_SYNC,
+    PARSER_AWAITING_CMD_ID,
+    PARSER_AWAITING_PARAM_ID,
+    PARSER_AWAITING_LEN,
+    PARSER_RECEIVING_PAYLOAD,
+    PARSER_AWAITING_CHECKSUM
+} ParserState_t;
+
+volatile ParserState_t parser_state = PARSER_AWAITING_SYNC;
 
 volatile int current_mode = STARTUP;
 struct TBinaryPacketV1 BinaryPacket1;
@@ -218,12 +238,87 @@ void USART1_IRQHandler(void) {
   }
 }
 
+/**
+ * @brief Processa um comando de escrita válido.
+ */
+void process_write_command() {
+    uint8_t param_id = rx_buffer[1]; // O ID do parâmetro está no segundo byte do buffer
+
+    if (param_id == PARAM_DEEP_SLEEP_INTERVAL) {
+        // O payload são os 4 bytes do valor.
+        // Copia os bytes do buffer para a nossa variável de configuração.
+        // Isso assume que o buffer contém {CMD_ID, PARAM_ID, LEN, DADO...}
+        uint32_t new_value;
+        memcpy(&new_value, &rx_buffer[3], sizeof(uint32_t));
+
+        // Atualiza a configuração global
+        deep_sleep_interval_seconds = new_value;
+    }
+}
+
 uint8_t calculate_checksum(uint8_t* data, int length) {
     uint8_t checksum = 0;
     for (int i = 0; i < length; i++) {
         checksum ^= data[i]; // XOR each byte with the checksum
     }
     return checksum;
+}
+
+void USART3_IRQHandler(void) {
+    if (USART_GetITStatus(USART3, USART_IT_RXNE) != RESET) {
+        uint8_t received_byte = USART_ReceiveData(USART3);
+
+        switch (parser_state) {
+            case PARSER_AWAITING_SYNC:
+                if (received_byte == CMD_SYNC_WORD) {
+                    rx_byte_count = 0;
+                    parser_state = PARSER_AWAITING_CMD_ID;
+                }
+                break;
+
+            case PARSER_AWAITING_CMD_ID:
+                rx_buffer[rx_byte_count++] = received_byte;
+                parser_state = PARSER_AWAITING_PARAM_ID;
+                break;
+
+            case PARSER_AWAITING_PARAM_ID:
+                rx_buffer[rx_byte_count++] = received_byte;
+                parser_state = PARSER_AWAITING_LEN;
+                break;
+
+            case PARSER_AWAITING_LEN:
+                rx_buffer[rx_byte_count++] = received_byte;
+                expected_payload_len = received_byte;
+                if (expected_payload_len > 0) {
+                    parser_state = PARSER_RECEIVING_PAYLOAD;
+                } else {
+                    parser_state = PARSER_AWAITING_CHECKSUM; // Sem payload
+                }
+                break;
+
+            case PARSER_RECEIVING_PAYLOAD:
+                rx_buffer[rx_byte_count++] = received_byte;
+                if ((rx_byte_count - 3) >= expected_payload_len) { // -3 para descontar CMD, PARAM, LEN
+                    parser_state = PARSER_AWAITING_CHECKSUM;
+                }
+                break;
+
+            case PARSER_AWAITING_CHECKSUM:
+                uint8_t received_checksum = received_byte;
+                // O checksum é calculado sobre CMD, PARAM, LEN e PAYLOAD
+                uint8_t calculated_checksum = calculate_checksum(rx_buffer, rx_byte_count);
+
+                if (received_checksum == calculated_checksum) {
+                    // Checksum OK! Processar o comando.
+                    if (rx_buffer[0] == CMD_WRITE) { // rx_buffer[0] é o CMD_ID
+                        process_write_command();
+                    }
+                }
+                // Resetar para esperar o próximo comando, independente do resultado
+                parser_state = PARSER_AWAITING_SYNC;
+                break;
+        }
+    }
 }
 
 /**
