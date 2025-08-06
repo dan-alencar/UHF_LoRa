@@ -11,6 +11,7 @@
 #include <stm32f10x_rcc.h>
 #include "stdlib.h"
 #include <stdio.h>
+#include <stdint.h>
 #include <string.h>
 #include <misc.h>
 #include <inttypes.h>
@@ -42,6 +43,7 @@
 #define MFSK 2
 #define FSK_2 3
 #define APRS 4
+#define LORA 5
 
 volatile int current_mode = STARTUP;
 struct TBinaryPacketV1 BinaryPacket1;
@@ -157,6 +159,7 @@ uint8_t NOGPS_counter;
 // Function Definitions
 void collect_telemetry_data();
 void send_rtty_packet();
+int prepare_lora_payload(uint8_t* buffer);
 #ifdef HORUS_V1
   void send_mfsk_packetV1();
 #endif
@@ -213,6 +216,14 @@ void USART1_IRQHandler(void) {
   } else {
     USART_ReceiveData(USART1);
   }
+}
+
+uint8_t calculate_checksum(uint8_t* data, int length) {
+    uint8_t checksum = 0;
+    for (int i = 0; i < length; i++) {
+        checksum ^= data[i]; // XOR each byte with the checksum
+    }
+    return checksum;
 }
 
 /**
@@ -514,7 +525,7 @@ int main(void) {
 
   led_red_on();
   led_green_off();
-  USART_SendData(USART3, 0xc);
+  //USART_SendData(USART3,'C');
 
   radio_soft_reset();
   // setting TX frequency
@@ -565,6 +576,7 @@ int main(void) {
           // Grab telemetry information.
           collect_telemetry_data();
           led_red_off();
+          //USART_SendData(USART3,'C');
 
           // Now Startup a RTTY Transmission
           current_mode = RTTY;
@@ -618,17 +630,54 @@ int main(void) {
             }
 		    #endif
 
-        } else {
-          // We've finished the transmission, grab new data.
-          current_mode = STARTUP;
-          radio_disable_tx();
+        }         // ===================================================================
+        // NEW LORA STATE LOGIC
+        // ===================================================================
+        else if (current_mode == APRS){ // <-- MODIFIED: This was the old "else" block
+            // We've just finished the APRS part of the cycle.
+            // Now, prepare and send the redundant LoRa packet.
+            current_mode = LORA;
+
+            #ifdef LORA_ENABLED
+				const uint8_t SYNC_WORD = 0xAA;
+
+				uint8_t lora_payload_buffer[32];
+				int payload_length = prepare_lora_payload(lora_payload_buffer);
+
+				// 1. SEND THE SYNC WORD FIRST
+				while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+				USART_SendData(USART3, SYNC_WORD);
+
+				// 2. SEND THE ACTUAL PAYLOAD (the struct bytes)
+				for (int i = 0; i < payload_length; i++) {
+					while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+					USART_SendData(USART3, lora_payload_buffer[i]);
+				}
+
+				// 3. CALCULATE AND SEND THE CHECKSUM
+				uint8_t checksum = calculate_checksum(lora_payload_buffer, payload_length);
+				while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+				USART_SendData(USART3, checksum);
+
+            #endif
+
+            // The original logic from the old "else" block now moves to the LORA state handler,
+            // or you can handle the transition to STARTUP there.
+            // Let's transition to LORA state, and LORA state will transition back to STARTUP.
+            // The logic from the old "else" block should be placed after the LORA transmission.
+
+        } else if (current_mode == LORA) {
+            // We have finished all transmissions for this cycle (RTTY, MFSK, APRS, LORA).
+            // Now, perform end-of-cycle tasks and reset for the next one.
+            current_mode = STARTUP;
+            radio_disable_tx();
 
 
-          #ifdef MORSE_IDENT
-            if(send_count%MORSE_IDENT == 0){
-              send_morse_ident();
-            }
-          #endif
+            #ifdef MORSE_IDENT
+              if(send_count%MORSE_IDENT == 0){
+                send_morse_ident();
+              }
+            #endif
 
           #ifdef DEEP_SLEEP
           // Deep Sleep mode!
@@ -691,6 +740,10 @@ int main(void) {
 
           #endif
 
+        }else {
+            // This case should ideally not be reached if the state machine is correct,
+            // but as a fallback, we reset to STARTUP.
+            current_mode = STARTUP;
         }
     } else {
       NVIC_SystemLPConfig(NVIC_LP_SEVONPEND, DISABLE);
@@ -788,6 +841,46 @@ void send_rtty_packet() {
   radio_enable_tx();
   tx_on = 1;
   // From here the timer interrupt handles things.
+}
+
+//------------------ LoRa Redundancy --------------------------------------
+int prepare_lora_payload(uint8_t* buffer) {
+
+    // Define a packed struct for the LoRa payload.
+    // `__attribute__((packed))` is crucial. It tells the compiler not to add padding bytes,
+    // ensuring the struct's memory layout is predictable for serialization.
+    typedef struct __attribute__((packed)) {
+        uint32_t packet_id;      // From send_count
+        int32_t  latitude_raw;   // From gpsData.lat_raw
+        int32_t  longitude_raw;  // From gpsData.lon_raw
+        int32_t  altitude_raw;   // From gpsData.alt_raw
+        uint16_t voltage_mv;     // From voltage
+        int8_t   radio_temp_c;   // From si4032_temperature
+        uint8_t  sats_and_fix;   // A combined field for satellite count and fix status
+    } LoRaPayload_t;
+
+    // Declare an instance of the payload struct.
+    LoRaPayload_t payload;
+
+    // Populate the payload struct with the global telemetry data.
+    payload.packet_id      = send_count;
+    payload.latitude_raw   = gpsData.lat_raw;
+    payload.longitude_raw  = gpsData.lon_raw;
+    payload.altitude_raw   = gpsData.alt_raw;
+    payload.voltage_mv     = voltage;
+    payload.radio_temp_c   = si4032_temperature;
+
+    // Combine satellite count and fix status into a single byte to save space.
+    // Bit 7: GPS Fix OK (1 = OK, 0 = No Fix)
+    // Bits 6-0: Satellite Count
+    payload.sats_and_fix = (gpsData.gpsFixOK & 0x01) << 7; // Put fix status in the most significant bit.
+    payload.sats_and_fix |= (gpsData.sats_raw & 0x7F);   // Put sat count in the lower 7 bits.
+
+    // Copy the raw bytes of the struct into the output buffer.
+    memcpy(buffer, &payload, sizeof(LoRaPayload_t));
+
+    // Return the size of the payload, which is exactly the size of our struct.
+    return sizeof(LoRaPayload_t);
 }
 
 
