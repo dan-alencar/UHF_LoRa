@@ -37,14 +37,14 @@ Radio/radio_driver.o: ../Radio/radio_driver.c ../Radio/radio_driver.h \
  ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_system.h \
  ../Core/Inc/main.h \
  ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_gpio.h \
- C:/Users/hardw/OneDrive/Documentos/LORA/STM32Cube_FW_WL_V1.3.0/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h \
- C:/Users/hardw/OneDrive/Documentos/LORA/STM32Cube_FW_WL_V1.3.0/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h \
- C:/Users/hardw/OneDrive/Documentos/LORA/STM32Cube_FW_WL_V1.3.0/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_conf.h \
- C:/Users/hardw/OneDrive/Documentos/LORA/STM32Cube_FW_WL_V1.3.0/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h \
- C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Radio/radio_driver.h \
+ /home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h \
+ /home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h \
+ /home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_conf.h \
+ /home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h \
+ /home/alisson/Documentos/GitHub/UHF_LoRa/Radio/radio_driver.h \
  ../Core/Inc/subghz.h \
- C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Utils/misc/stm32_mem.h \
- C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Utils/conf/utilities_conf.h \
+ /home/alisson/Documentos/GitHub/UHF_LoRa/Utils/misc/stm32_mem.h \
+ /home/alisson/Documentos/GitHub/UHF_LoRa/Utils/conf/utilities_conf.h \
  ../Drivers/CMSIS/Include/cmsis_compiler.h ../Radio/radio_board_if.h
 ../Radio/radio_driver.h:
 ../Radio/radio_conf.h:
@@ -86,13 +86,13 @@ Radio/radio_driver.o: ../Radio/radio_driver.c ../Radio/radio_driver.h \
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_system.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_gpio.h:
-C:/Users/hardw/OneDrive/Documentos/LORA/STM32Cube_FW_WL_V1.3.0/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h:
-C:/Users/hardw/OneDrive/Documentos/LORA/STM32Cube_FW_WL_V1.3.0/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h:
-C:/Users/hardw/OneDrive/Documentos/LORA/STM32Cube_FW_WL_V1.3.0/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_conf.h:
-C:/Users/hardw/OneDrive/Documentos/LORA/STM32Cube_FW_WL_V1.3.0/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h:
-C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Radio/radio_driver.h:
+/home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h:
+/home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h:
+/home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_conf.h:
+/home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h:
+/home/alisson/Documentos/GitHub/UHF_LoRa/Radio/radio_driver.h:
 ../Core/Inc/subghz.h:
-C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Utils/misc/stm32_mem.h:
-C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Utils/conf/utilities_conf.h:
+/home/alisson/Documentos/GitHub/UHF_LoRa/Utils/misc/stm32_mem.h:
+/home/alisson/Documentos/GitHub/UHF_LoRa/Utils/conf/utilities_conf.h:
 ../Drivers/CMSIS/Include/cmsis_compiler.h:
 ../Radio/radio_board_if.h:

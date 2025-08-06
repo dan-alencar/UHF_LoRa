@@ -16,7 +16,7 @@ S_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Startup/%.o: ../Core/Startup/%.s Core/Startup/subdir.mk
-	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Drivers/STM32WLxx_HAL_Driver" -I"C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Utils/misc" -I"C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Utils/conf" -I"C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Drivers/BSP/STM32WLxx_Nucleo" -I"C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Drivers/BSP" -I"C:/Users/hardw/STM32CubeIDE/workspace_1.19.0/LoRa_P2P_LowPower/Drivers" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"/home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/STM32WLxx_HAL_Driver" -I"/home/alisson/Documentos/GitHub/UHF_LoRa/Utils/misc" -I"/home/alisson/Documentos/GitHub/UHF_LoRa/Utils/conf" -I"/home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/BSP/STM32WLxx_Nucleo" -I"/home/alisson/Documentos/GitHub/UHF_LoRa/Drivers/BSP" -I"/home/alisson/Documentos/GitHub/UHF_LoRa/Drivers" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
 
 clean: clean-Core-2f-Startup
 

@@ -63,8 +63,8 @@ all: main-build
 main-build: LoRa_P2P_LowPower.elf secondary-outputs
 
 # Tool invocations
-LoRa_P2P_LowPower.elf LoRa_P2P_LowPower.map: $(OBJS) $(USER_OBJS) C:\Users\hardw\STM32CubeIDE\workspace_1.19.0\LoRa_P2P_LowPower\STM32WL55JCIX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "LoRa_P2P_LowPower.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\hardw\STM32CubeIDE\workspace_1.19.0\LoRa_P2P_LowPower\STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LoRa_P2P_LowPower.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+LoRa_P2P_LowPower.elf LoRa_P2P_LowPower.map: $(OBJS) $(USER_OBJS) /home/alisson/Documentos/GitHub/UHF_LoRa/STM32WL55JCIX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "LoRa_P2P_LowPower.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/alisson/Documentos/GitHub/UHF_LoRa/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LoRa_P2P_LowPower.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
