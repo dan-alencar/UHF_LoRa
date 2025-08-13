@@ -38,7 +38,9 @@
 
 #define CMD_SYNC_WORD           0xAA
 #define CMD_WRITE               0x02
+#define CMD_EXECUTE				0x04
 #define PARAM_DEEP_SLEEP_INTERVAL 0x10
+#define PARAM_MCU_RESET 0x01
 #define RX_BUFFER_SIZE 32
 
 // Transmit Modulation Switching
@@ -49,8 +51,10 @@
 #define APRS 4
 #define LORA 5
 
-extern volatile uint32_t deep_sleep_interval_seconds;
+//extern volatile uint32_t deep_sleep_interval_seconds;
 uint8_t rx_buffer[RX_BUFFER_SIZE];
+uint8_t global_command_buffer[RX_BUFFER_SIZE];
+uint8_t new_command_received = 0; //flag de comando em queue
 uint8_t rx_byte_count = 0;
 uint8_t expected_payload_len = 0;
 
@@ -241,20 +245,60 @@ void USART1_IRQHandler(void) {
 /**
  * @brief Processa um comando de escrita válido.
  */
-void process_write_command() {
-    uint8_t param_id = rx_buffer[1]; // O ID do parâmetro está no segundo byte do buffer
+// Função para processar um comando validado, chamada do loop principal
+void process_command(uint8_t* buffer) {
+    // Extrai os campos do cabeçalho do comando do buffer
+    // CORREÇÃO: Lê o valor no índice 0 do buffer, não o endereço do buffer.
+    uint8_t cmd_id   = buffer[0];
+    uint8_t param_id = buffer[1];
+    uint8_t len      = buffer[2];
+    uint8_t* data    = &buffer[3]; // Ponteiro para o início do payload de dados
 
-    if (param_id == PARAM_DEEP_SLEEP_INTERVAL) {
-        // O payload são os 4 bytes do valor.
-        // Copia os bytes do buffer para a nossa variável de configuração.
-        // Isso assume que o buffer contém {CMD_ID, PARAM_ID, LEN, DADO...}
-        uint32_t new_value;
-        memcpy(&new_value, &rx_buffer[3], sizeof(uint32_t));
+    // Estrutura de decisão principal baseada no tipo de comando (Ação)
+    switch (cmd_id) {
+        case CMD_WRITE: // Comandos que escrevem/modificam um valor de configuração
+            switch (param_id) {
+                case PARAM_DEEP_SLEEP_INTERVAL:
+                    // VALIDAÇÃO: O comando para este parâmetro DEVE ter um payload de 4 bytes.
+                    if (len == sizeof(uint32_t)) {
+                        uint32_t new_value;
+                        // Copia os dados do buffer para a variável local de forma segura
+                        memcpy(&new_value, data, sizeof(uint32_t));
 
-        // Atualiza a configuração global
-        deep_sleep_interval_seconds = new_value;
+                        // Atualiza a variável de configuração global
+//                        deep_sleep_interval_seconds = new_value;
+                    }
+                    // Se o 'len' for incorreto, o comando é simplesmente ignorado por segurança.
+                    break;
+
+                default:
+                    // Parâmetro de escrita desconhecido, ignorar.
+                    break;
+            }
+            break;
+
+        case CMD_EXECUTE: // Comandos que disparam uma ação imediata
+            switch (param_id) {
+                case PARAM_MCU_RESET: // Supondo que PARAM_MCU_RESET esteja definido em config.h
+                    // VALIDAÇÃO: Este comando não deve ter payload.
+                    if (len == 0) {
+                        // Executa um reset de software no microcontrolador
+                        NVIC_SystemReset();
+                    }
+                    break;
+
+                default:
+                    // Parâmetro de execução desconhecido, ignorar.
+                    break;
+            }
+            break;
+
+        default:
+            // Comando desconhecido, ignorar.
+            break;
     }
 }
+
 
 uint8_t calculate_checksum(uint8_t* data, int length) {
     uint8_t checksum = 0;
@@ -289,10 +333,20 @@ void USART3_IRQHandler(void) {
             case PARSER_AWAITING_LEN:
                 rx_buffer[rx_byte_count++] = received_byte;
                 expected_payload_len = received_byte;
+
+                // VERIFICAÇÃO DE SEGURANÇA:
+                // O tamanho total do pacote (cabeçalho + payload) não pode exceder o buffer.
+                // 3 bytes de cabeçalho (CMD, PARAM, LEN) + payload
+                if ((3 + expected_payload_len) > sizeof(rx_buffer)) {
+                    // Pacote inválido/malicioso, descarte e espere o próximo.
+                    parser_state = PARSER_AWAITING_SYNC;
+                    break;
+                }
+
                 if (expected_payload_len > 0) {
                     parser_state = PARSER_RECEIVING_PAYLOAD;
                 } else {
-                    parser_state = PARSER_AWAITING_CHECKSUM; // Sem payload
+                    parser_state = PARSER_AWAITING_CHECKSUM;
                 }
                 break;
 
@@ -309,12 +363,10 @@ void USART3_IRQHandler(void) {
                 uint8_t calculated_checksum = calculate_checksum(rx_buffer, rx_byte_count);
 
                 if (received_checksum == calculated_checksum) {
-                    // Checksum OK! Processar o comando.
-                    if (rx_buffer[0] == CMD_WRITE) { // rx_buffer[0] é o CMD_ID
-                        process_write_command();
-                    }
+                    // Checksum OK! Copie para o buffer global e sinalize.
+                    memcpy(&global_command_buffer, rx_buffer, rx_byte_count);
+                    new_command_received = 1; // Uma variável global booleana
                 }
-                // Resetar para esperar o próximo comando, independente do resultado
                 parser_state = PARSER_AWAITING_SYNC;
                 break;
         }
@@ -672,7 +724,10 @@ int main(void) {
           collect_telemetry_data();
           led_red_off();
           //USART_SendData(USART3,'C');
-
+          if (new_command_received) {
+              new_command_received = 0; // "Consome" o comando
+              process_command(global_command_buffer); // Processa o comando de forma segura
+          }
           // Now Startup a RTTY Transmission
           current_mode = RTTY;
           // If enabled, transmit a RTTY packet.

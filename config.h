@@ -140,7 +140,7 @@
 // Recommendation:  request for reboot after 7 Minutes if TX_DELAY 60s : = 420 Seconds * 1000 (ms) / TX_DELAY (ms) - round to integer please
 // if TX_DELAY smaller, make NOGPS_RESET_AFTER_TXCOUNT bigger
 //================================================
-#define NOGPS_RESET_AFTER_TXCOUNT 7  //tá contando 1m03s por minuto ?
+#define NOGPS_RESET_AFTER_TXCOUNT 10  //tá contando 1m03s por minuto ?
 //================================================
 
 // Delay *between* transmitted packets (milliseconds)
@@ -148,7 +148,7 @@
 // Then the transmitter will turn off between transmissions. This saves about 50mA of power consumption.
 // The maximum TX_DELAY is 65535*(1000/BAUD_RATE), so about 655.35 seconds for 100 baud
 //================================================
-#define TX_DELAY  15000
+#define TX_DELAY  60000
 //================================================
 //Shift TX Time within the minute up to milliseconds to avoid overlapping with other TX
 //Only works if SYNC_TX_WITH_GPS is activ
