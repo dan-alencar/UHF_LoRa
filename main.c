@@ -639,25 +639,32 @@ int main(void) {
             current_mode = LORA;
 
             #ifdef LORA_ENABLED
-				const uint8_t SYNC_WORD = 0xAA;
+                const uint8_t SYNC_WORD = 0xAA;
+                uint8_t lora_payload_buffer[32];
+                int payload_length = prepare_lora_payload(lora_payload_buffer);
 
-				uint8_t lora_payload_buffer[32];
-				int payload_length = prepare_lora_payload(lora_payload_buffer);
+                // --- INÍCIO DA SEÇÃO CRÍTICA ---
+                // Desabilita TODAS as interrupções que podem interferir durante a transmissão.
+                 __disable_irq();
 
-				// 1. SEND THE SYNC WORD FIRST
-				while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
-				USART_SendData(USART3, SYNC_WORD);
+                // 1. ENVIA O SYNC WORD
+                while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+                USART_SendData(USART3, SYNC_WORD);
 
-				// 2. SEND THE ACTUAL PAYLOAD (the struct bytes)
-				for (int i = 0; i < payload_length; i++) {
-					while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
-					USART_SendData(USART3, lora_payload_buffer[i]);
-				}
+                // 2. ENVIA O PAYLOAD
+                for (int i = 0; i < payload_length; i++) {
+                    while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+                    USART_SendData(USART3, lora_payload_buffer[i]);
+                }
 
-				// 3. CALCULATE AND SEND THE CHECKSUM
-				uint8_t checksum = calculate_checksum(lora_payload_buffer, payload_length);
-				while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
-				USART_SendData(USART3, checksum);
+                // 3. CALCULA E ENVIA O CHECKSUM
+                uint8_t checksum = calculate_checksum(lora_payload_buffer, payload_length);
+                while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+                USART_SendData(USART3, checksum);
+
+                // --- FIM DA SEÇÃO CRÍTICA ---
+                // Reabilita globalmente as interrupções.
+                __enable_irq();
 
             #endif
 
