@@ -25,12 +25,19 @@
 
 // Modulation Types - Comment out a line below to enable/disable a modulation.
 //================================================
-//#define RTTY_ENABLED
-#define MFSK_4_ENABLED
-//#define APRS_1200_ENABLED
+#define GFSK_ENABLED  
+// #define RTTY_ENABLED
+// #define MFSK_4_ENABLED
+// #define APRS_1200_ENABLED
 #define LORA_ENABLED
 //================================================
 
+// --- NOVAS CONFIGURAÇÕES GFSK ---
+#if defined(GFSK_ENABLED)
+#define GFSK_BAUD_RATE      4800   // Baud rate para GFSK (padrão da RS41)
+#define GFSK_DEVIATION      2400   // Desvio de frequência em Hz (padrão da RS41)
+#endif
+//================================================
 
 //*************RTTY SETTINGS******************
 #define CALLSIGN "URCALL" // put your RTTY callsign here, max. 15 characters

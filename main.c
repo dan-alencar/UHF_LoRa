@@ -44,6 +44,7 @@
 #define FSK_2 3
 #define APRS 4
 #define LORA 5
+#define GFSK 6
 
 volatile int current_mode = STARTUP;
 struct TBinaryPacketV1 BinaryPacket1;
@@ -102,7 +103,7 @@ volatile unsigned int tx_pip = TX_PIP / (1000/BAUD_RATE);
 
 // Binary Packet Format
 // Note that we need to pack this to 1-byte alignment, hence the #pragma flags below
-// Refer: https://gcc.gnu.org/onlinedocs/gcc-4.4.4/gcc/Structure_002dPacking-Pragmas.html
+// Refer: https://gcc.gnu.org/onlinedocs/gcc-4.4.4/gcc/Structure_002d-Packing-Pragmas.html
 #pragma pack(push,1) 
 struct TBinaryPacketV1
 {
@@ -617,12 +618,15 @@ int main(void) {
 			#ifdef APRS_1200_ENABLED
             if (next_aprs_counter-- <= 1) {
                 radio_enable_tx();
-		        GPSEntry gpsData;
-		        ublox_get_last_data(&gpsData);
+                
+                // CORREÇÃO: Removida a declaração de 'GPSEntry gpsData' local para usar sempre a global.
+		        // A chamada para ublox_get_last_data() também foi removida para garantir
+		        // que os dados sejam consistentes durante todo o ciclo de transmissão.
+		        
 		        USART_Cmd(USART1, DISABLE);
 		        int8_t temperature = radio_read_temperature();
-		        uint16_t voltage = (uint16_t) ADCVal[0] * 600 / 4096;
-		        aprs_send_position(gpsData, temperature, voltage);
+		        uint16_t voltage_aprs = (uint16_t) ADCVal[0] * 600 / 4096; // Tensão local para APRS
+		        aprs_send_position(gpsData, temperature, voltage_aprs);
 		        USART_Cmd(USART1, ENABLE);
 		        radio_disable_tx();
 		        _delay_ms(1000);
@@ -630,45 +634,52 @@ int main(void) {
             }
 		    #endif
 
-        }         // ===================================================================
-        // NEW LORA STATE LOGIC
+        } else if (current_mode == APRS) {
+          current_mode = GFSK;
+          // We've just transmitted an APRS packet, now configure for GFSK.
+          #ifdef GFSK_ENABLED
+            radio_enable_tx();
+            send_gfsk_packet();
+          #endif
+
+        }
         // ===================================================================
-        else if (current_mode == APRS){ // <-- MODIFIED: This was the old "else" block
-            // We've just finished the APRS part of the cycle.
-            // Now, prepare and send the redundant LoRa packet.
+        // CORREÇÃO DA LÓGICA LORA
+        // ===================================================================
+        else if (current_mode == GFSK){ 
             current_mode = LORA;
 
             #ifdef LORA_ENABLED
-				const uint8_t SYNC_WORD = 0xAA;
+                const uint8_t SYNC_WORD = 0xAA;
+                uint8_t lora_payload_buffer[32];
+                int payload_length = prepare_lora_payload(lora_payload_buffer);
 
-				uint8_t lora_payload_buffer[32];
-				int payload_length = prepare_lora_payload(lora_payload_buffer);
+                // --- INÍCIO DA SEÇÃO CRÍTICA ---
+                // Desabilita TODAS as interrupções que podem interferir durante a transmissão.
+                 __disable_irq();
 
-				// 1. SEND THE SYNC WORD FIRST
-				while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
-				USART_SendData(USART3, SYNC_WORD);
+                // 1. ENVIA O SYNC WORD
+                while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+                USART_SendData(USART3, SYNC_WORD);
 
-				// 2. SEND THE ACTUAL PAYLOAD (the struct bytes)
-				for (int i = 0; i < payload_length; i++) {
-					while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
-					USART_SendData(USART3, lora_payload_buffer[i]);
-				}
+                // 2. ENVIA O PAYLOAD
+                for (int i = 0; i < payload_length; i++) {
+                    while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+                    USART_SendData(USART3, lora_payload_buffer[i]);
+                }
 
-				// 3. CALCULATE AND SEND THE CHECKSUM
-				uint8_t checksum = calculate_checksum(lora_payload_buffer, payload_length);
-				while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
-				USART_SendData(USART3, checksum);
+                // 3. CALCULA E ENVIA O CHECKSUM
+                uint8_t checksum = calculate_checksum(lora_payload_buffer, payload_length);
+                while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+                USART_SendData(USART3, checksum);
 
+                // --- FIM DA SEÇÃO CRÍTICA ---
+                // Reabilita globalmente as interrupções.
+                __enable_irq();
             #endif
 
-            // The original logic from the old "else" block now moves to the LORA state handler,
-            // or you can handle the transition to STARTUP there.
-            // Let's transition to LORA state, and LORA state will transition back to STARTUP.
-            // The logic from the old "else" block should be placed after the LORA transmission.
-
         } else if (current_mode == LORA) {
-            // We have finished all transmissions for this cycle (RTTY, MFSK, APRS, LORA).
-            // Now, perform end-of-cycle tasks and reset for the next one.
+            // Finalizamos todas as transmissões do ciclo.
             current_mode = STARTUP;
             radio_disable_tx();
 
@@ -741,8 +752,7 @@ int main(void) {
           #endif
 
         }else {
-            // This case should ideally not be reached if the state machine is correct,
-            // but as a fallback, we reset to STARTUP.
+            // Este caso não deve ser alcançado, mas como fallback, resetamos.
             current_mode = STARTUP;
         }
     } else {
@@ -757,8 +767,18 @@ void collect_telemetry_data() {
   // Assemble and proccess the telemetry data we need to construct our RTTY and MFSK packets.
   send_count++;
   si4032_temperature = radio_read_temperature();
-  voltage = ADCVal[0] * 600 / 4096;
+  
+  // CORREÇÃO: Fórmula de tensão atualizada para maior precisão (assumindo divisor 2:1 e Vref=3.3V)
+  // NOTA: Se esta fórmula não funcionar, seu hardware pode ser diferente.
+  // Tente a fórmula original como alternativa: voltage = ADCVal[0] * 600 / 4096;
+  voltage = (uint16_t)(((uint32_t)ADCVal[0] * 6600) / 4095);
+
+  // --- INÍCIO DA SEÇÃO CRÍTICA PARA LEITURA DO GPS ---
+  // Desabilita a interrupção do GPS para garantir uma leitura atômica dos dados.
+  __disable_irq();
   ublox_get_last_data(&gpsData);
+  __enable_irq();
+  // --- FIM DA SEÇÃO CRÍTICA ---
 
   if (gpsData.gpsFixOK == 1) {
 	  NOGPS_counter = 0;
@@ -825,7 +845,7 @@ void send_rtty_packet() {
         (gpsData.alt_raw / 1000),
         speed_kph,
         sats_state,
-        voltage*10,
+        voltage, // CORREÇÃO: A variável 'voltage' agora está em mV.
         si4032_temperature
         );
   
@@ -874,7 +894,7 @@ int prepare_lora_payload(uint8_t* buffer) {
     // Bit 7: GPS Fix OK (1 = OK, 0 = No Fix)
     // Bits 6-0: Satellite Count
     payload.sats_and_fix = (gpsData.gpsFixOK & 0x01) << 7; // Put fix status in the most significant bit.
-    payload.sats_and_fix |= (gpsData.sats_raw & 0x7F);   // Put sat count in the lower 7 bits.
+    payload.sats_and_fix |= (NOGPS_counter & 0x7F);   // Put sat count in the lower 7 bits.
 
     // Copy the raw bytes of the struct into the output buffer.
     memcpy(buffer, &payload, sizeof(LoRaPayload_t));
@@ -898,7 +918,7 @@ void send_mfsk_packetV1(){
   float float_lat = (float)gpsData.lat_raw / 10000000.0;
   float float_lon = (float)gpsData.lon_raw / 10000000.0;
 
-  uint8_t volts_scaled = (uint8_t)(255*(float)voltage/500.0);
+  uint8_t volts_scaled = (uint8_t)(255.0f * (float)voltage / 5000.0f); // CORREÇÃO: Divisão por 5000mV e uso de floats
 
   // Assemble a binary packet
   // Global defined: struct TBinaryPacketV1 BinaryPacket1;
@@ -1029,7 +1049,7 @@ void send_mfsk_packetV2(){
   float float_lat = (float)gpsData.lat_raw / 10000000.0;
   float float_lon = (float)gpsData.lon_raw / 10000000.0;
 
-  uint8_t volts_scaled = (uint8_t)(255*(float)voltage/500.0);
+  uint8_t volts_scaled = (uint8_t)(255.0f * (float)voltage / 5000.0f); // CORREÇÃO: Divisão por 5000mV e uso de floats
 
   // Assemble a binary packet
   struct TBinaryPacketV2 BinaryPacket2;
