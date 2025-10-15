@@ -44,6 +44,7 @@
 #define FSK_2 3
 #define APRS 4
 #define LORA 5
+#define GFSK 6 // <--- ADD THIS LINE
 
 volatile int current_mode = STARTUP;
 struct TBinaryPacketV1 BinaryPacket1;
@@ -160,6 +161,8 @@ uint8_t NOGPS_counter;
 void collect_telemetry_data();
 void send_rtty_packet();
 int prepare_lora_payload(uint8_t* buffer);
+void radio_init_gfsk(); // <--- ADD THIS
+void prepare_and_send_gfsk_packet(); // <--- ADD THIS
 #ifdef HORUS_V1
   void send_mfsk_packetV1();
 #endif
@@ -674,7 +677,22 @@ int main(void) {
             // The logic from the old "else" block should be placed after the LORA transmission.
 
         } else if (current_mode == LORA) {
-            // We have finished all transmissions for this cycle (RTTY, MFSK, APRS, LORA).
+            // We have finished the LoRa transmission.
+            // Now, prepare and send the GFSK packet.
+            current_mode = GFSK; // <-- CHANGE THIS: Transition to GFSK
+
+            #ifdef GFSK_ENABLED
+              // Disable interrupts during this to ensure clean transmission
+              //__disable_irq();
+              prepare_and_send_gfsk_packet();
+              //__enable_irq();
+            #endif
+
+            // The original logic from the old "else" block now moves to the GFSK state handler.
+            // We'll put it there to run after ALL transmissions are complete.
+
+        } else if (current_mode == GFSK) { // <-- ADD THIS NEW BLOCK
+            // We have finished all transmissions for this cycle (RTTY, MFSK, APRS, LORA, GFSK).
             // Now, perform end-of-cycle tasks and reset for the next one.
             current_mode = STARTUP;
             radio_disable_tx();
@@ -685,6 +703,9 @@ int main(void) {
                 send_morse_ident();
               }
             #endif
+
+            Sync_tx_on_delay(); // Calculate the delay until the next cycle.
+            tx_enable = 0;      // Let the timer interrupt re-enable the loop after the delay.
 
           #ifdef DEEP_SLEEP
           // Deep Sleep mode!
@@ -890,6 +911,104 @@ int prepare_lora_payload(uint8_t* buffer) {
     return sizeof(LoRaPayload_t);
 }
 
+void radio_init_gfsk() {
+    // ADD THIS LINE to set the TX data clock for FIFO mode
+    // =================================================================
+    radio_rw_register(0x70, 0x2C, 1); // txdcl=Packet Handler, antdit=0, enphpk=1
+    // =================================================================
+
+    // Set modulation to GFSK, data source from FIFO (This line was already correct)
+    radio_rw_register(0x71, 0x23, 1); // modtyp=GFSK, txdatcl=ignored, dtmod=FIFO
+
+
+    // Set data rate based on config
+    // Formula: txdps = (2^16 / 10^6) * GFSK_DATA_RATE
+    uint16_t txdps = (uint16_t)(65536.0f * GFSK_DATA_RATE / 1000000.0f);
+    radio_rw_register(0x6E, (txdps >> 8) & 0xFF, 1); // Transmit Data Rate 1
+    radio_rw_register(0x6F, txdps & 0xFF, 1);        // Transmit Data Rate 0
+
+    // Set frequency deviation
+    // Formula: fd = GFSK_DEVIATION / 625
+    uint16_t fd = GFSK_DEVIATION / 625;
+    radio_rw_register(0x72, fd & 0xFF, 1);
+
+    // Set preamble length
+    radio_rw_register(0x34, GFSK_PREAMBLE_LEN, 1);
+
+    // Set sync word
+    radio_rw_register(0x36, (GFSK_SYNC_WORD >> 8) & 0xFF, 1); // Sync Word 3
+    radio_rw_register(0x37, GFSK_SYNC_WORD & 0xFF, 1);      // Sync Word 2
+}
+
+/**
+ * @brief Prepares a GFSK data payload and transmits it via the Si4032 FIFO.
+ */
+void prepare_and_send_gfsk_packet() {
+    // 1. Define a packed struct for the GFSK payload
+    typedef struct __attribute__((packed)) {
+        uint32_t packet_id;
+        int32_t  latitude_raw;
+        int32_t  longitude_raw;
+        int32_t  altitude_raw;
+        uint16_t voltage_mv;
+        int8_t   radio_temp_c;
+        uint8_t  sats_and_fix;
+    } GFSKPayload_t;
+
+    // 2. Populate the payload struct
+    GFSKPayload_t payload;
+    payload.packet_id      = send_count;
+    payload.latitude_raw   = gpsData.lat_raw;
+    payload.longitude_raw  = gpsData.lon_raw;
+    payload.altitude_raw   = gpsData.alt_raw;
+    payload.voltage_mv     = voltage;
+    payload.radio_temp_c   = si4032_temperature;
+    payload.sats_and_fix = (gpsData.gpsFixOK & 0x01) << 7;
+    payload.sats_and_fix |= (gpsData.sats_raw & 0x7F);
+    const uint8_t TEST_WORD = 0x55;
+
+    // 3. Calculate checksum
+    uint8_t checksum = calculate_checksum((uint8_t*)&payload, sizeof(payload));
+
+    // 4. Configure radio for GFSK
+    radio_init_gfsk();
+
+    // =================================================================
+    // ADD THIS BLOCK - THE FIX
+    // =================================================================
+    // 4a. Set the total packet length (payload + 1 byte for checksum)
+    uint8_t total_packet_length = sizeof(payload) + 1;
+    radio_rw_register(0x3E, total_packet_length, 1); // Write to Transmit Packet Length register
+    // =================================================================
+
+    // 5. Clear TX FIFO and enable transmitter
+    radio_rw_register(0x08, 0x01, 1); // Clear TX FIFO
+    radio_rw_register(0x08, 0x00, 1); // Return to normal
+    radio_enable_tx();
+
+    // 5a. Re-assert GFSK mode immediately before sending data.
+    // This overrides any defaults set by radio_enable_tx().
+    radio_rw_register(0x70, 0x2C, 1); // CRITICAL: Fixes unmodulated carrier.
+    radio_rw_register(0x71, 0x23, 1); // CRITICAL: Fixes unmodulated carrier.
+
+    // 6. Load payload and checksum into FIFO
+    uint8_t *byte_ptr = (uint8_t*)&payload;
+    for(int i = 0; i < sizeof(payload); i++) {
+        radio_rw_register(0x7F, byte_ptr[i], 1); // Write to FIFO
+    }
+    radio_rw_register(0x7F, checksum, 1); // Write checksum to FIFO
+
+    // 7. Wait for packet to be sent (check PK_SENT status bit)
+    // This is a simple busy-wait loop.
+    while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+                USART_SendData(USART3, TEST_WORD);
+    //while((radio_rw_register(0x04, 0x00, 0) & 0x04) == 0);
+    _delay_ms(30);
+    while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+                USART_SendData(USART3, TEST_WORD);
+    // 8. Disable transmitter
+    radio_disable_tx();
+}
 
 //------------------ HORUS V1 --------------------------------------
 #ifdef HORUS_V1

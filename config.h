@@ -26,10 +26,18 @@
 // Modulation Types - Comment out a line below to enable/disable a modulation.
 //================================================
 //#define RTTY_ENABLED
-#define MFSK_4_ENABLED
+//#define MFSK_4_ENABLED
 //#define APRS_1200_ENABLED
-#define LORA_ENABLED
+//#define LORA_ENABLED
+#define GFSK_ENABLED   // <--- ADD THIS LINE
 //================================================
+
+//*************GFSK SETTINGS******************
+#define GFSK_DATA_RATE      9600    // bps (e.g., 4800, 9600, 19200)
+#define GFSK_DEVIATION      5000   // Hz (e.g., 50000 for 50kHz)
+#define GFSK_PREAMBLE_LEN   4       // Preamble length in bytes
+#define GFSK_SYNC_WORD      0x2DD4  // 2-byte sync word
+
 
 
 //*************RTTY SETTINGS******************
@@ -154,13 +162,13 @@
 //Only works if SYNC_TX_WITH_GPS is activ
 //ATTENTION: do NOT set OFFSET HIGHER THEN TX_DELAY - This results in unexpected behavior
 //================================================
-#define TX_DELAY_OFFSET  5000
+//#define TX_DELAY_OFFSET  5000
 //================================================
 
 // Try to sync the TX to start on full minute if GPSfix is available.
 // Disable: insert "//" before
 //================================================
-#define SYNC_TX_WITH_GPS
+//#define SYNC_TX_WITH_GPS
 //================================================
 
 // If defined, transmit a short 20ms 'pip' between transmissions every X milliseconds.
