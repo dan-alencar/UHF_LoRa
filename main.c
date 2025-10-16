@@ -89,6 +89,7 @@ volatile uint8_t disable_armed = 0;
 
 volatile uint32_t deep_sleep_timer = 0;
 volatile uint8_t entered_psm = 0;
+volatile uint8_t reset_pending = 0;
 
 #ifdef CONTINUOUS_MODE
   volatile uint8_t continuous_mode = 1;
@@ -572,6 +573,19 @@ int main(void) {
   while (1) {
     // Don't do anything until the previous transmission has finished.
     if (tx_on == 0 && tx_enable) {
+      
+        // ===================================================================
+        // NEW: SAFE RESET HANDLER
+        // ===================================================================
+        // If a reset has been requested, handle it now before starting
+        // a new, pointless transmission cycle.
+        if (reset_pending) {
+            radio_disable_tx(); // Ensure the radio is off
+            _delay_ms(100);     // Brief delay for stability and to let I/O finish
+            NVIC_SystemReset(); // Perform the clean reset
+        }
+        // ===================================================================
+
         if (current_mode == STARTUP){
           // Grab telemetry information.
           collect_telemetry_data();
@@ -786,8 +800,11 @@ void collect_telemetry_data() {
   } else {
       // No GPS fix.
 	#ifdef NOGPS_RESET_AFTER_TXCOUNT
-	  NOGPS_counter++;
-	  if(NOGPS_counter > NOGPS_RESET_AFTER_TXCOUNT) NVIC_SystemReset();
+      NOGPS_counter++;
+      if(NOGPS_counter > NOGPS_RESET_AFTER_TXCOUNT) {
+          // NVIC_SystemReset(); // <-- REMOVE THIS DANGEROUS DIRECT CALL
+          reset_pending = 1;      // <-- REPLACE IT WITH THE FLAG
+      }
 	#endif
       flaga &= ~0x80;
       led_enabled = 1; // Enable LEDs when there is no GPS fix (i.e. during startup)

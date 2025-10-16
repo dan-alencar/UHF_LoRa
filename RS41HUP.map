@@ -1183,7 +1183,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nof
 END GROUP
                 0x20002000                        _eram = 0x20002000
 
-.text           0x08000000     0x6ee7
+.text           0x08000000     0x6ef3
  *(.isr_vector)
  .isr_vector    0x08000000      0x124 CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
                 0x08000000                g_pfnVectors
@@ -1290,451 +1290,451 @@ END GROUP
                 0x08000cd8      0x2b0 CMakeFiles/RS41HUP.elf.dir/main.c.obj
                 0x08000cd8                TIM2_IRQHandler
  .text.collect_telemetry_data
-                0x08000f88       0xc0 CMakeFiles/RS41HUP.elf.dir/main.c.obj
+                0x08000f88       0xa8 CMakeFiles/RS41HUP.elf.dir/main.c.obj
                 0x08000f88                collect_telemetry_data
  .text.send_mfsk_packetV2
-                0x08001048      0x14c CMakeFiles/RS41HUP.elf.dir/main.c.obj
-                0x08001048                send_mfsk_packetV2
+                0x08001030      0x14c CMakeFiles/RS41HUP.elf.dir/main.c.obj
+                0x08001030                send_mfsk_packetV2
  .text.startup.main
-                0x08001194      0x1dc CMakeFiles/RS41HUP.elf.dir/main.c.obj
-                0x08001194                main
+                0x0800117c      0x200 CMakeFiles/RS41HUP.elf.dir/main.c.obj
+                0x0800117c                main
  .text.send_4fsk
-                0x08001370       0x2c CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
-                0x08001370                send_4fsk
+                0x0800137c       0x2c CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
+                0x0800137c                send_4fsk
  .text.send_2fsk
-                0x0800139c       0x30 CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
-                0x0800139c                send_2fsk
+                0x080013a8       0x30 CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
+                0x080013a8                send_2fsk
  .text.radio_rw_register
-                0x080013cc       0x5c CMakeFiles/RS41HUP.elf.dir/radio.c.obj
-                0x080013cc                radio_rw_register
+                0x080013d8       0x5c CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+                0x080013d8                radio_rw_register
  .text.radio_set_tx_frequency
-                0x08001428      0x16c CMakeFiles/RS41HUP.elf.dir/radio.c.obj
-                0x08001428                radio_set_tx_frequency
+                0x08001434      0x16c CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+                0x08001434                radio_set_tx_frequency
  .text.radio_disable_tx
-                0x08001594       0x4c CMakeFiles/RS41HUP.elf.dir/radio.c.obj
-                0x08001594                radio_disable_tx
+                0x080015a0       0x4c CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+                0x080015a0                radio_disable_tx
  .text.radio_soft_reset
-                0x080015e0       0x4c CMakeFiles/RS41HUP.elf.dir/radio.c.obj
-                0x080015e0                radio_soft_reset
+                0x080015ec       0x4c CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+                0x080015ec                radio_soft_reset
  .text.radio_enable_tx
-                0x0800162c       0x4c CMakeFiles/RS41HUP.elf.dir/radio.c.obj
-                0x0800162c                radio_enable_tx
+                0x08001638       0x4c CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+                0x08001638                radio_enable_tx
  .text.radio_read_temperature
-                0x08001678       0x90 CMakeFiles/RS41HUP.elf.dir/radio.c.obj
-                0x08001678                radio_read_temperature
+                0x08001684       0x90 CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+                0x08001684                radio_read_temperature
  .text.NVIC_Init
-                0x08001708       0x5c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
-                0x08001708                NVIC_Init
+                0x08001714       0x5c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
+                0x08001714                NVIC_Init
  .text.NVIC_SetVectorTable
-                0x08001764       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
-                0x08001764                NVIC_SetVectorTable
+                0x08001770       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
+                0x08001770                NVIC_SetVectorTable
  .text.NVIC_SystemLPConfig
-                0x08001778       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
-                0x08001778                NVIC_SystemLPConfig
+                0x08001784       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
+                0x08001784                NVIC_SystemLPConfig
  .text.ADC_Init
-                0x08001790       0x4c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
-                0x08001790                ADC_Init
- .text.ADC_Cmd  0x080017dc       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
-                0x080017dc                ADC_Cmd
+                0x0800179c       0x4c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+                0x0800179c                ADC_Init
+ .text.ADC_Cmd  0x080017e8       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+                0x080017e8                ADC_Cmd
  .text.ADC_DMACmd
-                0x080017f0       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
-                0x080017f0                ADC_DMACmd
+                0x080017fc       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+                0x080017fc                ADC_DMACmd
  .text.ADC_ResetCalibration
-                0x08001804        0xc CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
-                0x08001804                ADC_ResetCalibration
+                0x08001810        0xc CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+                0x08001810                ADC_ResetCalibration
  .text.ADC_GetResetCalibrationStatus
-                0x08001810        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
-                0x08001810                ADC_GetResetCalibrationStatus
+                0x0800181c        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+                0x0800181c                ADC_GetResetCalibrationStatus
  .text.ADC_StartCalibration
-                0x08001818        0xc CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
-                0x08001818                ADC_StartCalibration
+                0x08001824        0xc CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+                0x08001824                ADC_StartCalibration
  .text.ADC_GetCalibrationStatus
-                0x08001824        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
-                0x08001824                ADC_GetCalibrationStatus
+                0x08001830        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+                0x08001830                ADC_GetCalibrationStatus
  .text.ADC_SoftwareStartConvCmd
-                0x0800182c       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
-                0x0800182c                ADC_SoftwareStartConvCmd
+                0x08001838       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+                0x08001838                ADC_SoftwareStartConvCmd
  .text.ADC_RegularChannelConfig
-                0x08001840       0x9c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
-                0x08001840                ADC_RegularChannelConfig
+                0x0800184c       0x9c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+                0x0800184c                ADC_RegularChannelConfig
  .text.DMA_DeInit
-                0x080018dc      0x128 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
-                0x080018dc                DMA_DeInit
+                0x080018e8      0x128 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
+                0x080018e8                DMA_DeInit
  .text.DMA_Init
-                0x08001a04       0x3c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
-                0x08001a04                DMA_Init
- .text.DMA_Cmd  0x08001a40       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
-                0x08001a40                DMA_Cmd
+                0x08001a10       0x3c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
+                0x08001a10                DMA_Init
+ .text.DMA_Cmd  0x08001a4c       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
+                0x08001a4c                DMA_Cmd
  .text.FLASH_SetLatency
-                0x08001a58       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
-                0x08001a58                FLASH_SetLatency
+                0x08001a64       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
+                0x08001a64                FLASH_SetLatency
  .text.FLASH_PrefetchBufferCmd
-                0x08001a6c       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
-                0x08001a6c                FLASH_PrefetchBufferCmd
+                0x08001a78       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
+                0x08001a78                FLASH_PrefetchBufferCmd
  .text.GPIO_Init
-                0x08001a84      0x354 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
-                0x08001a84                GPIO_Init
+                0x08001a90      0x354 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
+                0x08001a90                GPIO_Init
  .text.GPIO_SetBits
-                0x08001dd8        0x4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
-                0x08001dd8                GPIO_SetBits
+                0x08001de4        0x4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
+                0x08001de4                GPIO_SetBits
  .text.GPIO_ResetBits
-                0x08001ddc        0x4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
-                0x08001ddc                GPIO_ResetBits
+                0x08001de8        0x4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
+                0x08001de8                GPIO_ResetBits
  .text.GPIO_PinRemapConfig
-                0x08001de0       0x70 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
-                0x08001de0                GPIO_PinRemapConfig
+                0x08001dec       0x70 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
+                0x08001dec                GPIO_PinRemapConfig
  .text.RCC_DeInit
-                0x08001e50       0x48 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08001e50                RCC_DeInit
+                0x08001e5c       0x48 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08001e5c                RCC_DeInit
  .text.RCC_HSEConfig
-                0x08001e98       0x38 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08001e98                RCC_HSEConfig
+                0x08001ea4       0x38 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08001ea4                RCC_HSEConfig
  .text.RCC_WaitForHSEStartUp
-                0x08001ed0       0x34 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08001ed0                RCC_WaitForHSEStartUp
+                0x08001edc       0x34 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08001edc                RCC_WaitForHSEStartUp
  .text.RCC_SYSCLKConfig
-                0x08001f04       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08001f04                RCC_SYSCLKConfig
+                0x08001f10       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08001f10                RCC_SYSCLKConfig
  .text.RCC_GetSYSCLKSource
-                0x08001f18       0x10 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08001f18                RCC_GetSYSCLKSource
+                0x08001f24       0x10 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08001f24                RCC_GetSYSCLKSource
  .text.RCC_HCLKConfig
-                0x08001f28       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08001f28                RCC_HCLKConfig
+                0x08001f34       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08001f34                RCC_HCLKConfig
  .text.RCC_PCLK1Config
-                0x08001f3c       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08001f3c                RCC_PCLK1Config
+                0x08001f48       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08001f48                RCC_PCLK1Config
  .text.RCC_PCLK2Config
-                0x08001f50       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08001f50                RCC_PCLK2Config
+                0x08001f5c       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08001f5c                RCC_PCLK2Config
  .text.RCC_ADCCLKConfig
-                0x08001f64       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08001f64                RCC_ADCCLKConfig
+                0x08001f70       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08001f70                RCC_ADCCLKConfig
  .text.RCC_GetClocksFreq
-                0x08001f78       0x9c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08001f78                RCC_GetClocksFreq
+                0x08001f84       0x9c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08001f84                RCC_GetClocksFreq
  .text.RCC_AHBPeriphClockCmd
-                0x08002014       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08002014                RCC_AHBPeriphClockCmd
+                0x08002020       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08002020                RCC_AHBPeriphClockCmd
  .text.RCC_APB2PeriphClockCmd
-                0x0800202c       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x0800202c                RCC_APB2PeriphClockCmd
+                0x08002038       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08002038                RCC_APB2PeriphClockCmd
  .text.RCC_APB1PeriphClockCmd
-                0x08002044       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x08002044                RCC_APB1PeriphClockCmd
+                0x08002050       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08002050                RCC_APB1PeriphClockCmd
  .text.RCC_APB1PeriphResetCmd
-                0x0800205c       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
-                0x0800205c                RCC_APB1PeriphResetCmd
+                0x08002068       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08002068                RCC_APB1PeriphResetCmd
  .text.SPI_Init
-                0x08002074       0x54 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
-                0x08002074                SPI_Init
- .text.SPI_Cmd  0x080020c8       0x1c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
-                0x080020c8                SPI_Cmd
+                0x08002080       0x54 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+                0x08002080                SPI_Init
+ .text.SPI_Cmd  0x080020d4       0x1c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+                0x080020d4                SPI_Cmd
  .text.SPI_I2S_SendData
-                0x080020e4        0x4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
-                0x080020e4                SPI_I2S_SendData
+                0x080020f0        0x4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+                0x080020f0                SPI_I2S_SendData
  .text.SPI_I2S_ReceiveData
-                0x080020e8        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
-                0x080020e8                SPI_I2S_ReceiveData
+                0x080020f4        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+                0x080020f4                SPI_I2S_ReceiveData
  .text.SPI_SSOutputCmd
-                0x080020f0       0x1c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
-                0x080020f0                SPI_SSOutputCmd
+                0x080020fc       0x1c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+                0x080020fc                SPI_SSOutputCmd
  .text.SPI_I2S_GetFlagStatus
-                0x0800210c        0xc CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
-                0x0800210c                SPI_I2S_GetFlagStatus
+                0x08002118        0xc CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+                0x08002118                SPI_I2S_GetFlagStatus
  .text.TIM_TimeBaseInit
-                0x08002118       0xc8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
-                0x08002118                TIM_TimeBaseInit
- .text.TIM_Cmd  0x080021e0       0x1c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
-                0x080021e0                TIM_Cmd
+                0x08002124       0xc8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+                0x08002124                TIM_TimeBaseInit
+ .text.TIM_Cmd  0x080021ec       0x1c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+                0x080021ec                TIM_Cmd
  .text.TIM_ITConfig
-                0x080021fc       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
-                0x080021fc                TIM_ITConfig
+                0x08002208       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+                0x08002208                TIM_ITConfig
  .text.TIM_SetCounter
-                0x08002210        0x4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
-                0x08002210                TIM_SetCounter
+                0x0800221c        0x4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+                0x0800221c                TIM_SetCounter
  .text.TIM_SetAutoreload
-                0x08002214        0x4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
-                0x08002214                TIM_SetAutoreload
+                0x08002220        0x4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+                0x08002220                TIM_SetAutoreload
  .text.TIM_GetITStatus
-                0x08002218       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
-                0x08002218                TIM_GetITStatus
+                0x08002224       0x18 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+                0x08002224                TIM_GetITStatus
  .text.TIM_ClearITPendingBit
-                0x08002230        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
-                0x08002230                TIM_ClearITPendingBit
+                0x0800223c        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+                0x0800223c                TIM_ClearITPendingBit
  .text.USART_Init
-                0x08002238       0xb8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
-                0x08002238                USART_Init
+                0x08002244       0xb8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+                0x08002244                USART_Init
  .text.USART_Cmd
-                0x080022f0       0x1c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
-                0x080022f0                USART_Cmd
+                0x080022fc       0x1c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+                0x080022fc                USART_Cmd
  .text.USART_ITConfig
-                0x0800230c       0x34 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
-                0x0800230c                USART_ITConfig
+                0x08002318       0x34 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+                0x08002318                USART_ITConfig
  .text.USART_SendData
-                0x08002340        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
-                0x08002340                USART_SendData
+                0x0800234c        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+                0x0800234c                USART_SendData
  .text.USART_ReceiveData
-                0x08002348        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
-                0x08002348                USART_ReceiveData
+                0x08002354        0x8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+                0x08002354                USART_ReceiveData
  .text.USART_GetFlagStatus
-                0x08002350        0xc CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
-                0x08002350                USART_GetFlagStatus
+                0x0800235c        0xc CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+                0x0800235c                USART_GetFlagStatus
  .text.USART_GetITStatus
-                0x0800235c       0x40 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
-                0x0800235c                USART_GetITStatus
+                0x08002368       0x40 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+                0x08002368                USART_GetITStatus
  .text.USART_ClearITPendingBit
-                0x0800239c       0x10 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
-                0x0800239c                USART_ClearITPendingBit
- .text._sbrk    0x080023ac       0x1c CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
-                0x080023ac                _sbrk
- .text._close   0x080023c8        0x8 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
-                0x080023c8                _close
- .text._fstat   0x080023d0        0xc CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
-                0x080023d0                _fstat
- .text._isatty  0x080023dc        0x4 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
-                0x080023dc                _isatty
- .text._lseek   0x080023e0        0x4 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
-                0x080023e0                _lseek
- .text._read    0x080023e4        0x4 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
-                0x080023e4                _read
- .text._write   0x080023e8        0x4 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
-                0x080023e8                _write
+                0x080023a8       0x10 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+                0x080023a8                USART_ClearITPendingBit
+ .text._sbrk    0x080023b8       0x1c CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+                0x080023b8                _sbrk
+ .text._close   0x080023d4        0x8 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+                0x080023d4                _close
+ .text._fstat   0x080023dc        0xc CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+                0x080023dc                _fstat
+ .text._isatty  0x080023e8        0x4 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+                0x080023e8                _isatty
+ .text._lseek   0x080023ec        0x4 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+                0x080023ec                _lseek
+ .text._read    0x080023f0        0x4 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+                0x080023f0                _read
+ .text._write   0x080023f4        0x4 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+                0x080023f4                _write
  .text.unlikely.abort
-                0x080023ec        0x2 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
-                0x080023ec                abort
- *fill*         0x080023ee        0x2 
+                0x080023f8        0x2 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+                0x080023f8                abort
+ *fill*         0x080023fa        0x2 
  .text.ublox_get_last_data
-                0x080023f0       0x38 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
-                0x080023f0                ublox_get_last_data
+                0x080023fc       0x38 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+                0x080023fc                ublox_get_last_data
  .text.ubx_powersave
-                0x08002428      0x1ac CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
-                0x08002428                ubx_powersave
+                0x08002434      0x1ac CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+                0x08002434                ubx_powersave
  .text.ubx_config_gps
-                0x080025d4      0x918 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
-                0x080025d4                ubx_config_gps
+                0x080025e0      0x918 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+                0x080025e0                ubx_config_gps
  .text.ublox_init
-                0x08002eec      0x1e4 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
-                0x08002eec                ublox_init
+                0x08002ef8      0x1e4 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+                0x08002ef8                ublox_init
  .text.ublox_handle_packet
-                0x080030d0      0x140 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
-                0x080030d0                ublox_handle_packet
+                0x080030dc      0x140 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+                0x080030dc                ublox_handle_packet
  .text.ublox_handle_incoming_byte
-                0x08003210       0x8c CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
-                0x08003210                ublox_handle_incoming_byte
+                0x0800321c       0x8c CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+                0x0800321c                ublox_handle_incoming_byte
  .text.array_CRC16_checksum
-                0x0800329c       0xec CMakeFiles/RS41HUP.elf.dir/util.c.obj
-                0x0800329c                array_CRC16_checksum
+                0x080032a8       0xec CMakeFiles/RS41HUP.elf.dir/util.c.obj
+                0x080032a8                array_CRC16_checksum
  .text._ZN9QAPRSBase11parseRelaysEPKcPc
-                0x08003388       0xd0 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
-                0x08003388                QAPRSBase::parseRelays(char const*, char*)
+                0x08003394       0xd0 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+                0x08003394                QAPRSBase::parseRelays(char const*, char*)
  .text._ZN9QAPRSBase4initEaaPchS0_hS0_
-                0x08003458       0xac CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
-                0x08003458                QAPRSBase::init(signed char, signed char, char*, unsigned char, char*, unsigned char, char*)
+                0x08003464       0xac CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+                0x08003464                QAPRSBase::init(signed char, signed char, char*, unsigned char, char*, unsigned char, char*)
  .text._ZN9QAPRSBase21timerInterruptHandlerEv
-                0x08003504       0x58 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
-                0x08003504                QAPRSBase::timerInterruptHandler()
+                0x08003510       0x58 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+                0x08003510                QAPRSBase::timerInterruptHandler()
  .text.aprs_init
-                0x0800355c       0x68 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
-                0x0800355c                aprs_init
+                0x08003568       0x68 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+                0x08003568                aprs_init
  .text.aprs_timer_handler
-                0x080035c4        0xc CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
-                0x080035c4                aprs_timer_handler
- .text.aprs_is_active
                 0x080035d0        0xc CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
-                0x080035d0                aprs_is_active
- .text          0x080035dc      0x378 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
-                0x080035dc                __aeabi_drsub
-                0x080035e4                __aeabi_dsub
-                0x080035e4                __subdf3
-                0x080035e8                __adddf3
-                0x080035e8                __aeabi_dadd
-                0x08003860                __aeabi_ui2d
-                0x08003860                __floatunsidf
-                0x08003880                __floatsidf
-                0x08003880                __aeabi_i2d
-                0x080038a4                __extendsfdf2
-                0x080038a4                __aeabi_f2d
-                0x080038e8                __aeabi_ul2d
-                0x080038e8                __floatundidf
-                0x080038f8                __floatdidf
-                0x080038f8                __aeabi_l2d
- .text          0x08003954      0x424 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
-                0x08003954                __aeabi_dmul
-                0x08003954                __muldf3
-                0x08003ba8                __aeabi_ddiv
-                0x08003ba8                __divdf3
- .text          0x08003d78       0x50 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
-                0x08003d78                __fixdfsi
-                0x08003d78                __aeabi_d2iz
- .text          0x08003dc8       0x40 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
-                0x08003dc8                __fixunsdfsi
-                0x08003dc8                __aeabi_d2uiz
- .text          0x08003e08      0x21c /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
-                0x08003e08                __aeabi_frsub
-                0x08003e10                __subsf3
-                0x08003e10                __aeabi_fsub
-                0x08003e14                __aeabi_fadd
-                0x08003e14                __addsf3
-                0x08003f74                __aeabi_ui2f
-                0x08003f74                __floatunsisf
-                0x08003f7c                __aeabi_i2f
-                0x08003f7c                __floatsisf
-                0x08003f98                __floatundisf
-                0x08003f98                __aeabi_ul2f
-                0x08003fa8                __floatdisf
-                0x08003fa8                __aeabi_l2f
- .text          0x08004024      0x2a0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
-                0x08004024                __mulsf3
-                0x08004024                __aeabi_fmul
-                0x0800418c                __divsf3
-                0x0800418c                __aeabi_fdiv
- .text          0x080042c4       0xec /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
-                0x080042c4                __gtsf2
-                0x080042c4                __gesf2
-                0x080042cc                __lesf2
-                0x080042cc                __ltsf2
-                0x080042d4                __nesf2
-                0x080042d4                __eqsf2
-                0x080042d4                __cmpsf2
-                0x08004334                __aeabi_cfrcmple
-                0x0800433c                __aeabi_cfcmple
-                0x0800433c                __aeabi_cfcmpeq
-                0x0800434c                __aeabi_fcmpeq
-                0x08004360                __aeabi_fcmplt
-                0x08004374                __aeabi_fcmple
-                0x08004388                __aeabi_fcmpge
-                0x0800439c                __aeabi_fcmpgt
- .text          0x080043b0       0x40 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
-                0x080043b0                __aeabi_f2uiz
-                0x080043b0                __fixunssfsi
- .text          0x080043f0      0xa60 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
-                0x080046b0                _Unwind_GetCFA
-                0x080046b4                __gnu_Unwind_RaiseException
-                0x0800471c                __gnu_Unwind_ForcedUnwind
-                0x08004730                __gnu_Unwind_Resume
-                0x08004770                __gnu_Unwind_Resume_or_Rethrow
-                0x08004784                _Unwind_Complete
-                0x08004788                _Unwind_DeleteException
-                0x08004794                _Unwind_VRS_Get
-                0x080047e4                _Unwind_VRS_Set
-                0x08004830                __gnu_Unwind_Backtrace
-                0x08004b58                __aeabi_unwind_cpp_pr0
-                0x08004b5c                __aeabi_unwind_cpp_pr1
-                0x08004b60                __aeabi_unwind_cpp_pr2
-                0x08004b64                _Unwind_VRS_Pop
- .text          0x08004e50      0x1ac /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(libunwind.o)
-                0x08004e50                __restore_core_regs
-                0x08004e50                restore_core_regs
-                0x08004e68                __gnu_Unwind_Restore_VFP
-                0x08004e70                __gnu_Unwind_Save_VFP
-                0x08004e78                __gnu_Unwind_Restore_VFP_D
-                0x08004e80                __gnu_Unwind_Save_VFP_D
-                0x08004e88                __gnu_Unwind_Restore_VFP_D_16_to_31
-                0x08004e90                __gnu_Unwind_Save_VFP_D_16_to_31
-                0x08004e98                __gnu_Unwind_Restore_WMMXD
-                0x08004edc                __gnu_Unwind_Save_WMMXD
-                0x08004f20                __gnu_Unwind_Restore_WMMXC
-                0x08004f34                __gnu_Unwind_Save_WMMXC
-                0x08004f48                ___Unwind_RaiseException
-                0x08004f48                _Unwind_RaiseException
-                0x08004f6c                ___Unwind_Resume
-                0x08004f6c                _Unwind_Resume
-                0x08004f90                _Unwind_Resume_or_Rethrow
-                0x08004f90                ___Unwind_Resume_or_Rethrow
-                0x08004fb4                ___Unwind_ForcedUnwind
-                0x08004fb4                _Unwind_ForcedUnwind
-                0x08004fd8                _Unwind_Backtrace
-                0x08004fd8                ___Unwind_Backtrace
- .text          0x08004ffc      0x3a4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
-                0x08005054                __gnu_unwind_execute
-                0x08005350                __gnu_unwind_frame
-                0x08005380                _Unwind_GetRegionStart
-                0x0800538c                _Unwind_GetLanguageSpecificData
- .text          0x080053a0       0x4c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
-                0x080053a0                __assert_func
-                0x080053e0                __assert
- .text          0x080053ec       0x5c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
-                0x080053ec                strlen
- .text          0x08005448       0xbc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
-                0x08005448                strcpy
- .text          0x08005504       0xa0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memset.o)
-                0x08005504                memset
- .text          0x080055a4      0x14c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
-                0x080055f0                _malloc_r
- .text          0x080056f0       0xbc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
-                0x080056f0                _free_r
- .text          0x080057ac       0xfc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memmove.o)
-                0x080057ac                memmove
- .text          0x080058a8       0xec /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
-                0x080058a8                memcpy
- .text          0x08005994       0x44 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fprintf.o)
-                0x08005994                _fprintf_r
-                0x08005994                _fiprintf_r
-                0x080059b0                fprintf
-                0x080059b0                fiprintf
- .text          0x080059d8       0x64 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reallocr.o)
-                0x080059d8                _realloc_r
- .text          0x08005a3c      0x3a8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x08005a3c                _printf_common
-                0x08005b60                _printf_i
- .text          0x08005de4        0x8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mlock.o)
-                0x08005de4                __malloc_lock
-                0x08005de8                __malloc_unlock
- .text          0x08005dec       0x98 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
-                0x08005dec                memchr
- .text          0x08005e84      0x2ec /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
-                0x08005eac                __sfputs_r
-                0x08005edc                __sprint_r
-                0x08005efc                _vfiprintf_r
-                0x08005efc                _vfprintf_r
-                0x08006154                vfiprintf
-                0x08006154                vfprintf
- .text          0x08006170       0x9c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
-                0x08006170                __swbuf_r
-                0x080061f8                __swbuf
- .text          0x0800620c       0x24 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-sbrkr.o)
-                0x0800620c                _sbrk_r
- .text          0x08006230       0x10 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-msizer.o)
-                0x08006230                _malloc_usable_size_r
- .text          0x08006240      0x2ec /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
-                0x08006240                __sfvwrite_r
- .text          0x0800652c      0x224 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
-                0x0800665c                __sfp
-                0x08006700                __sinit
-                0x08006720                __sfp_lock_acquire
-                0x08006724                __sfp_lock_release
-                0x08006728                __fp_lock_all
-                0x0800673c                __fp_unlock_all
- .text          0x08006750      0x198 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
-                0x08006750                __sflush_r
-                0x08006864                _fflush_r
-                0x0800689c                fflush
- .text          0x080068e8       0x44 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fwalk.o)
-                0x080068e8                _fwalk_sglue
- .text          0x0800692c       0xc4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
-                0x0800692c                __swsetup_r
- .text          0x080069f0      0x110 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
-                0x080069f0                __smakebuf_r
-                0x08006ab4                __swhatbuf_r
- .text          0x08006b00       0x24 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-isattyr.o)
-                0x08006b00                _isatty_r
- .text          0x08006b24       0x94 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-stdio.o)
-                0x08006b24                __sread
-                0x08006b48                __seofread
-                0x08006b4c                __swrite
-                0x08006b8c                __sseek
-                0x08006bb0                __sclose
- .text          0x08006bb8       0x24 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-closer.o)
-                0x08006bb8                _close_r
- .text          0x08006bdc       0x2c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-readr.o)
-                0x08006bdc                _read_r
- .text          0x08006c08       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fstatr.o)
-                0x08006c08                _fstat_r
- .text          0x08006c30       0x2c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-lseekr.o)
-                0x08006c30                _lseek_r
- .text          0x08006c5c       0x2c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
-                0x08006c5c                _write_r
+                0x080035d0                aprs_timer_handler
+ .text.aprs_is_active
+                0x080035dc        0xc CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+                0x080035dc                aprs_is_active
+ .text          0x080035e8      0x378 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
+                0x080035e8                __aeabi_drsub
+                0x080035f0                __aeabi_dsub
+                0x080035f0                __subdf3
+                0x080035f4                __adddf3
+                0x080035f4                __aeabi_dadd
+                0x0800386c                __aeabi_ui2d
+                0x0800386c                __floatunsidf
+                0x0800388c                __floatsidf
+                0x0800388c                __aeabi_i2d
+                0x080038b0                __extendsfdf2
+                0x080038b0                __aeabi_f2d
+                0x080038f4                __aeabi_ul2d
+                0x080038f4                __floatundidf
+                0x08003904                __floatdidf
+                0x08003904                __aeabi_l2d
+ .text          0x08003960      0x424 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
+                0x08003960                __aeabi_dmul
+                0x08003960                __muldf3
+                0x08003bb4                __aeabi_ddiv
+                0x08003bb4                __divdf3
+ .text          0x08003d84       0x50 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
+                0x08003d84                __fixdfsi
+                0x08003d84                __aeabi_d2iz
+ .text          0x08003dd4       0x40 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+                0x08003dd4                __fixunsdfsi
+                0x08003dd4                __aeabi_d2uiz
+ .text          0x08003e14      0x21c /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+                0x08003e14                __aeabi_frsub
+                0x08003e1c                __subsf3
+                0x08003e1c                __aeabi_fsub
+                0x08003e20                __aeabi_fadd
+                0x08003e20                __addsf3
+                0x08003f80                __aeabi_ui2f
+                0x08003f80                __floatunsisf
+                0x08003f88                __aeabi_i2f
+                0x08003f88                __floatsisf
+                0x08003fa4                __floatundisf
+                0x08003fa4                __aeabi_ul2f
+                0x08003fb4                __floatdisf
+                0x08003fb4                __aeabi_l2f
+ .text          0x08004030      0x2a0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
+                0x08004030                __mulsf3
+                0x08004030                __aeabi_fmul
+                0x08004198                __divsf3
+                0x08004198                __aeabi_fdiv
+ .text          0x080042d0       0xec /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
+                0x080042d0                __gtsf2
+                0x080042d0                __gesf2
+                0x080042d8                __lesf2
+                0x080042d8                __ltsf2
+                0x080042e0                __nesf2
+                0x080042e0                __eqsf2
+                0x080042e0                __cmpsf2
+                0x08004340                __aeabi_cfrcmple
+                0x08004348                __aeabi_cfcmple
+                0x08004348                __aeabi_cfcmpeq
+                0x08004358                __aeabi_fcmpeq
+                0x0800436c                __aeabi_fcmplt
+                0x08004380                __aeabi_fcmple
+                0x08004394                __aeabi_fcmpge
+                0x080043a8                __aeabi_fcmpgt
+ .text          0x080043bc       0x40 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+                0x080043bc                __aeabi_f2uiz
+                0x080043bc                __fixunssfsi
+ .text          0x080043fc      0xa60 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
+                0x080046bc                _Unwind_GetCFA
+                0x080046c0                __gnu_Unwind_RaiseException
+                0x08004728                __gnu_Unwind_ForcedUnwind
+                0x0800473c                __gnu_Unwind_Resume
+                0x0800477c                __gnu_Unwind_Resume_or_Rethrow
+                0x08004790                _Unwind_Complete
+                0x08004794                _Unwind_DeleteException
+                0x080047a0                _Unwind_VRS_Get
+                0x080047f0                _Unwind_VRS_Set
+                0x0800483c                __gnu_Unwind_Backtrace
+                0x08004b64                __aeabi_unwind_cpp_pr0
+                0x08004b68                __aeabi_unwind_cpp_pr1
+                0x08004b6c                __aeabi_unwind_cpp_pr2
+                0x08004b70                _Unwind_VRS_Pop
+ .text          0x08004e5c      0x1ac /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(libunwind.o)
+                0x08004e5c                __restore_core_regs
+                0x08004e5c                restore_core_regs
+                0x08004e74                __gnu_Unwind_Restore_VFP
+                0x08004e7c                __gnu_Unwind_Save_VFP
+                0x08004e84                __gnu_Unwind_Restore_VFP_D
+                0x08004e8c                __gnu_Unwind_Save_VFP_D
+                0x08004e94                __gnu_Unwind_Restore_VFP_D_16_to_31
+                0x08004e9c                __gnu_Unwind_Save_VFP_D_16_to_31
+                0x08004ea4                __gnu_Unwind_Restore_WMMXD
+                0x08004ee8                __gnu_Unwind_Save_WMMXD
+                0x08004f2c                __gnu_Unwind_Restore_WMMXC
+                0x08004f40                __gnu_Unwind_Save_WMMXC
+                0x08004f54                ___Unwind_RaiseException
+                0x08004f54                _Unwind_RaiseException
+                0x08004f78                ___Unwind_Resume
+                0x08004f78                _Unwind_Resume
+                0x08004f9c                _Unwind_Resume_or_Rethrow
+                0x08004f9c                ___Unwind_Resume_or_Rethrow
+                0x08004fc0                ___Unwind_ForcedUnwind
+                0x08004fc0                _Unwind_ForcedUnwind
+                0x08004fe4                _Unwind_Backtrace
+                0x08004fe4                ___Unwind_Backtrace
+ .text          0x08005008      0x3a4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
+                0x08005060                __gnu_unwind_execute
+                0x0800535c                __gnu_unwind_frame
+                0x0800538c                _Unwind_GetRegionStart
+                0x08005398                _Unwind_GetLanguageSpecificData
+ .text          0x080053ac       0x4c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
+                0x080053ac                __assert_func
+                0x080053ec                __assert
+ .text          0x080053f8       0x5c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
+                0x080053f8                strlen
+ .text          0x08005454       0xbc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
+                0x08005454                strcpy
+ .text          0x08005510       0xa0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memset.o)
+                0x08005510                memset
+ .text          0x080055b0      0x14c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
+                0x080055fc                _malloc_r
+ .text          0x080056fc       0xbc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
+                0x080056fc                _free_r
+ .text          0x080057b8       0xfc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memmove.o)
+                0x080057b8                memmove
+ .text          0x080058b4       0xec /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
+                0x080058b4                memcpy
+ .text          0x080059a0       0x44 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fprintf.o)
+                0x080059a0                _fprintf_r
+                0x080059a0                _fiprintf_r
+                0x080059bc                fprintf
+                0x080059bc                fiprintf
+ .text          0x080059e4       0x64 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reallocr.o)
+                0x080059e4                _realloc_r
+ .text          0x08005a48      0x3a8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x08005a48                _printf_common
+                0x08005b6c                _printf_i
+ .text          0x08005df0        0x8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mlock.o)
+                0x08005df0                __malloc_lock
+                0x08005df4                __malloc_unlock
+ .text          0x08005df8       0x98 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
+                0x08005df8                memchr
+ .text          0x08005e90      0x2ec /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x08005eb8                __sfputs_r
+                0x08005ee8                __sprint_r
+                0x08005f08                _vfiprintf_r
+                0x08005f08                _vfprintf_r
+                0x08006160                vfiprintf
+                0x08006160                vfprintf
+ .text          0x0800617c       0x9c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
+                0x0800617c                __swbuf_r
+                0x08006204                __swbuf
+ .text          0x08006218       0x24 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+                0x08006218                _sbrk_r
+ .text          0x0800623c       0x10 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-msizer.o)
+                0x0800623c                _malloc_usable_size_r
+ .text          0x0800624c      0x2ec /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+                0x0800624c                __sfvwrite_r
+ .text          0x08006538      0x224 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x08006668                __sfp
+                0x0800670c                __sinit
+                0x0800672c                __sfp_lock_acquire
+                0x08006730                __sfp_lock_release
+                0x08006734                __fp_lock_all
+                0x08006748                __fp_unlock_all
+ .text          0x0800675c      0x198 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
+                0x0800675c                __sflush_r
+                0x08006870                _fflush_r
+                0x080068a8                fflush
+ .text          0x080068f4       0x44 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fwalk.o)
+                0x080068f4                _fwalk_sglue
+ .text          0x08006938       0xc4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
+                0x08006938                __swsetup_r
+ .text          0x080069fc      0x110 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
+                0x080069fc                __smakebuf_r
+                0x08006ac0                __swhatbuf_r
+ .text          0x08006b0c       0x24 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-isattyr.o)
+                0x08006b0c                _isatty_r
+ .text          0x08006b30       0x94 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-stdio.o)
+                0x08006b30                __sread
+                0x08006b54                __seofread
+                0x08006b58                __swrite
+                0x08006b98                __sseek
+                0x08006bbc                __sclose
+ .text          0x08006bc4       0x24 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-closer.o)
+                0x08006bc4                _close_r
+ .text          0x08006be8       0x2c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-readr.o)
+                0x08006be8                _read_r
+ .text          0x08006c14       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fstatr.o)
+                0x08006c14                _fstat_r
+ .text          0x08006c3c       0x2c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-lseekr.o)
+                0x08006c3c                _lseek_r
+ .text          0x08006c68       0x2c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
+                0x08006c68                _write_r
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -1749,73 +1749,73 @@ END GROUP
  *(.dtors)
  *(.rodata*)
  .rodata.str1.4
-                0x08006c88      0x21f CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj
+                0x08006c94      0x21f CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj
                                  0x6a (size before relaxing)
- *fill*         0x08006ea7        0x1 
- .rodata        0x08006ea8       0x1a CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj
+ *fill*         0x08006eb3        0x1 
+ .rodata        0x08006eb4       0x1a CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj
  .rodata.str1.4
-                0x08006ec2       0xc0 CMakeFiles/RS41HUP.elf.dir/main.c.obj
- *fill*         0x08006ec2        0x2 
- .rodata        0x08006ec4       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x08006ece       0xc0 CMakeFiles/RS41HUP.elf.dir/main.c.obj
+ *fill*         0x08006ece        0x2 
+ .rodata        0x08006ed0       0x14 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
  .rodata.str1.4
-                0x08006ed8       0x7d CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
- .rodata        0x08006ed8        0xf CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+                0x08006ee4       0x7d CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+ .rodata        0x08006ee4        0xf CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
  .rodata.str1.4
-                0x08006ee7       0x43 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
+                0x08006ef3       0x43 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
  .rodata.str1.4
-                0x08006ee7       0x25 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x08006ef3       0x25 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
  .rodata.str1.4
-                0x08006ee7       0x13 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x08006ef3       0x13 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
  *(.eh_fram e*)
 
-.glue_7         0x08006ee8        0x0
- .glue_7        0x08006ee8        0x0 linker stubs
+.glue_7         0x08006ef4        0x0
+ .glue_7        0x08006ef4        0x0 linker stubs
 
-.glue_7t        0x08006ee8        0x0
- .glue_7t       0x08006ee8        0x0 linker stubs
+.glue_7t        0x08006ef4        0x0
+ .glue_7t       0x08006ef4        0x0 linker stubs
 
-.vfp11_veneer   0x08006ee8        0x0
- .vfp11_veneer  0x08006ee8        0x0 linker stubs
+.vfp11_veneer   0x08006ef4        0x0
+ .vfp11_veneer  0x08006ef4        0x0 linker stubs
 
-.v4_bx          0x08006ee8        0x0
- .v4_bx         0x08006ee8        0x0 linker stubs
+.v4_bx          0x08006ef4        0x0
+ .v4_bx         0x08006ef4        0x0 linker stubs
 
-.iplt           0x08006ee8        0x0
- .iplt          0x08006ee8        0x0 CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
+.iplt           0x08006ef4        0x0
+ .iplt          0x08006ef4        0x0 CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
 
-.ARM.extab      0x08006ee8       0x18
+.ARM.extab      0x08006ef4       0x18
  *(.ARM.extab* .gnu.linkonce.armextab.*)
- .ARM.extab     0x08006ee8       0x18 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
-                0x08006f00                        __exidx_start = .
+ .ARM.extab     0x08006ef4       0x18 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
+                0x08006f0c                        __exidx_start = .
 
-.ARM.exidx      0x08006f00       0xd8
+.ARM.exidx      0x08006f0c       0xd8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
  .ARM.exidx.text._ZN9QAPRSBase11parseRelaysEPKcPc
-                0x08006f00        0x8 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+                0x08006f0c        0x8 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
  .ARM.exidx.text._ZN9QAPRSBase4initEaaPchS0_hS0_
-                0x08006f08        0x8 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+                0x08006f14        0x8 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
  .ARM.exidx.text._ZN9QAPRSBase21timerInterruptHandlerEv
-                0x08006f10        0x8 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+                0x08006f1c        0x8 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
  .ARM.exidx.text.aprs_init
-                0x08006f18        0x8 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+                0x08006f24        0x8 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
  .ARM.exidx.text.aprs_timer_handler
-                0x08006f20        0x8 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+                0x08006f2c        0x8 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
  .ARM.exidx.text.aprs_is_active
-                0x08006f28        0x0 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+                0x08006f34        0x0 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
                                   0x8 (size before relaxing)
- .ARM.exidx     0x08006f28       0x78 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
+ .ARM.exidx     0x08006f34       0x78 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
                                  0xd8 (size before relaxing)
- .ARM.exidx     0x08006fa0       0x38 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
- .ARM.exidx     0x08006fd8        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
+ .ARM.exidx     0x08006fac       0x38 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
+ .ARM.exidx     0x08006fe4        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
                                   0x8 (size before relaxing)
-                0x08006fd8                        __exidx_end = .
-                0x08006fd8                        __etext = .
-                0x08006fd8                        _sidata = __etext
+                0x08006fe4                        __exidx_end = .
+                0x08006fe4                        __etext = .
+                0x08006fe4                        _sidata = __etext
 
-.rel.dyn        0x08006fd8        0x0
- .rel.iplt      0x08006fd8        0x0 CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
+.rel.dyn        0x08006fe4        0x0
+ .rel.iplt      0x08006fe4        0x0 CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
 
-.data           0x20000000      0x150 load address 0x08006fd8
+.data           0x20000000      0x150 load address 0x08006fe4
                 0x20000000                        __data_start__ = .
                 0x20000000                        _sdata = __data_start__
  *(vtable)
@@ -1858,10 +1858,10 @@ END GROUP
                 0x20000150                        __data_end__ = .
                 0x20000150                        _edata = __data_end__
 
-.igot.plt       0x20000150        0x0 load address 0x08007128
+.igot.plt       0x20000150        0x0 load address 0x08007134
  .igot.plt      0x20000150        0x0 CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
 
-.bss            0x20000150      0x7e4 load address 0x08007128
+.bss            0x20000150      0x7e4 load address 0x08007134
                 0x20000150                        . = ALIGN (0x4)
                 0x20000150                        __bss_start__ = .
                 0x20000150                        _sbss = __bss_start__
@@ -1900,6 +1900,7 @@ END GROUP
                 0x20000210                voltage
                 0x20000214                NOGPS_counter
                 0x20000215                entered_psm
+                0x20000216                reset_pending
                 0x20000218                buf_rtty
                 0x20000344                buf_mfsk
                 0x20000470                buf_morse
@@ -1940,7 +1941,7 @@ END GROUP
  *(.heap*)
                 0x20000934                        __HeapLimit = .
 
-.co_stack       0x20000934      0x404 load address 0x0800790c
+.co_stack       0x20000934      0x404 load address 0x08007918
                 0x20000938                        . = ALIGN (0x8)
  *fill*         0x20000934        0x4 
  *(.co_stack .co_stack.*)
@@ -1953,139 +1954,139 @@ END GROUP
 OUTPUT(RS41HUP.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000    0x2a159
+.debug_info     0x00000000    0x2a185
  .debug_info    0x00000000      0x114 CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
  .debug_info    0x00000114      0x8b0 CMakeFiles/RS41HUP.elf.dir/delay.c.obj
  .debug_info    0x000009c4      0x120 CMakeFiles/RS41HUP.elf.dir/f_rtty.c.obj
  .debug_info    0x00000ae4      0x96e CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj
  .debug_info    0x00001452     0x1c77 CMakeFiles/RS41HUP.elf.dir/init.c.obj
- .debug_info    0x000030c9     0x210e CMakeFiles/RS41HUP.elf.dir/main.c.obj
- .debug_info    0x000051d7      0x210 CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
- .debug_info    0x000053e7      0xf28 CMakeFiles/RS41HUP.elf.dir/radio.c.obj
- .debug_info    0x0000630f      0x4f8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
- .debug_info    0x00006807      0xc72 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
- .debug_info    0x00007479      0x439 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
- .debug_info    0x000078b2     0x1a56 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
- .debug_info    0x00009308      0x89a CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
- .debug_info    0x00009ba2      0x9ac CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
- .debug_info    0x0000a54e      0x9f9 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
- .debug_info    0x0000af47     0x275b CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
- .debug_info    0x0000d6a2      0xb58 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
- .debug_info    0x0000e1fa      0x4a7 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
- .debug_info    0x0000e6a1     0x4297 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
- .debug_info    0x00012938      0x1e6 CMakeFiles/RS41HUP.elf.dir/util.c.obj
- .debug_info    0x00012b1e     0x24bb CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
- .debug_info    0x00014fd9     0x2bf9 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
- .debug_info    0x00017bd2       0xd3 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
- .debug_info    0x00017ca5       0x57 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
- .debug_info    0x00017cfc       0x3c /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
- .debug_info    0x00017d38       0x3c /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
- .debug_info    0x00017d74       0xca /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
- .debug_info    0x00017e3e       0x57 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
- .debug_info    0x00017e95       0xdb /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
- .debug_info    0x00017f70       0x3c /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
- .debug_info    0x00017fac     0x1fa9 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
- .debug_info    0x00019f55       0xb7 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(libunwind.o)
- .debug_info    0x0001a00c      0xae1 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
- .debug_info    0x0001aaed      0x825 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
- .debug_info    0x0001b312       0xbd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
- .debug_info    0x0001b3cf       0xc3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
- .debug_info    0x0001b492      0x70b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-impure.o)
- .debug_info    0x0001bb9d      0x135 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_info    0x0001bcd2      0x9b6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .debug_info    0x0001c688      0x87f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
- .debug_info    0x0001cf07      0x148 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memmove.o)
- .debug_info    0x0001d04f       0x33 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
- .debug_info    0x0001d082      0x85d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fprintf.o)
- .debug_info    0x0001d8df      0x8cd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .debug_info    0x0001e1ac      0xdd7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_info    0x0001ef83      0x71c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mlock.o)
- .debug_info    0x0001f69f      0x14a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
- .debug_info    0x0001f7e9     0x108a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_info    0x00020873      0x863 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
- .debug_info    0x000210d6      0x778 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-sbrkr.o)
- .debug_info    0x0002184e      0x78a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-msizer.o)
- .debug_info    0x00021fd8      0xb1e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
- .debug_info    0x00022af6      0xe8c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
- .debug_info    0x00023982      0xa30 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
- .debug_info    0x000243b2      0x7c8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fwalk.o)
- .debug_info    0x00024b7a      0x7b1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
- .debug_info    0x0002532b      0x89f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reent.o)
- .debug_info    0x00025bca      0xbe6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
- .debug_info    0x000267b0      0x752 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-isattyr.o)
- .debug_info    0x00026f02      0xa80 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-stdio.o)
- .debug_info    0x00027982      0x752 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-closer.o)
- .debug_info    0x000280d4      0x7b5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-readr.o)
- .debug_info    0x00028889      0x977 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fstatr.o)
- .debug_info    0x00029200      0x79e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-lseekr.o)
- .debug_info    0x0002999e      0x7bb /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
+ .debug_info    0x000030c9     0x213a CMakeFiles/RS41HUP.elf.dir/main.c.obj
+ .debug_info    0x00005203      0x210 CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
+ .debug_info    0x00005413      0xf28 CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+ .debug_info    0x0000633b      0x4f8 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
+ .debug_info    0x00006833      0xc72 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+ .debug_info    0x000074a5      0x439 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
+ .debug_info    0x000078de     0x1a56 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
+ .debug_info    0x00009334      0x89a CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
+ .debug_info    0x00009bce      0x9ac CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+ .debug_info    0x0000a57a      0x9f9 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+ .debug_info    0x0000af73     0x275b CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+ .debug_info    0x0000d6ce      0xb58 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+ .debug_info    0x0000e226      0x4a7 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+ .debug_info    0x0000e6cd     0x4297 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+ .debug_info    0x00012964      0x1e6 CMakeFiles/RS41HUP.elf.dir/util.c.obj
+ .debug_info    0x00012b4a     0x24bb CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+ .debug_info    0x00015005     0x2bf9 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+ .debug_info    0x00017bfe       0xd3 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_info    0x00017cd1       0x57 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_info    0x00017d28       0x3c /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
+ .debug_info    0x00017d64       0x3c /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_info    0x00017da0       0xca /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_info    0x00017e6a       0x57 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .debug_info    0x00017ec1       0xdb /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .debug_info    0x00017f9c       0x3c /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .debug_info    0x00017fd8     0x1fa9 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
+ .debug_info    0x00019f81       0xb7 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(libunwind.o)
+ .debug_info    0x0001a038      0xae1 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
+ .debug_info    0x0001ab19      0x825 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
+ .debug_info    0x0001b33e       0xbd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
+ .debug_info    0x0001b3fb       0xc3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
+ .debug_info    0x0001b4be      0x70b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-impure.o)
+ .debug_info    0x0001bbc9      0x135 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_info    0x0001bcfe      0x9b6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_info    0x0001c6b4      0x87f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_info    0x0001cf33      0x148 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_info    0x0001d07b       0x33 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
+ .debug_info    0x0001d0ae      0x85d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fprintf.o)
+ .debug_info    0x0001d90b      0x8cd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_info    0x0001e1d8      0xdd7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_info    0x0001efaf      0x71c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_info    0x0001f6cb      0x14a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_info    0x0001f815     0x108a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_info    0x0002089f      0x863 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
+ .debug_info    0x00021102      0x778 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .debug_info    0x0002187a      0x78a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_info    0x00022004      0xb1e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+ .debug_info    0x00022b22      0xe8c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_info    0x000239ae      0xa30 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
+ .debug_info    0x000243de      0x7c8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fwalk.o)
+ .debug_info    0x00024ba6      0x7b1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
+ .debug_info    0x00025357      0x89f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_info    0x00025bf6      0xbe6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
+ .debug_info    0x000267dc      0x752 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-isattyr.o)
+ .debug_info    0x00026f2e      0xa80 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-stdio.o)
+ .debug_info    0x000279ae      0x752 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-closer.o)
+ .debug_info    0x00028100      0x7b5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-readr.o)
+ .debug_info    0x000288b5      0x977 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fstatr.o)
+ .debug_info    0x0002922c      0x79e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-lseekr.o)
+ .debug_info    0x000299ca      0x7bb /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
 
-.debug_abbrev   0x00000000     0x7d40
+.debug_abbrev   0x00000000     0x7d2a
  .debug_abbrev  0x00000000       0xfd CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
  .debug_abbrev  0x000000fd      0x248 CMakeFiles/RS41HUP.elf.dir/delay.c.obj
  .debug_abbrev  0x00000345       0xda CMakeFiles/RS41HUP.elf.dir/f_rtty.c.obj
  .debug_abbrev  0x0000041f      0x35d CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj
  .debug_abbrev  0x0000077c      0x3c8 CMakeFiles/RS41HUP.elf.dir/init.c.obj
- .debug_abbrev  0x00000b44      0x53b CMakeFiles/RS41HUP.elf.dir/main.c.obj
- .debug_abbrev  0x0000107f       0xcf CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
- .debug_abbrev  0x0000114e      0x2a0 CMakeFiles/RS41HUP.elf.dir/radio.c.obj
- .debug_abbrev  0x000013ee      0x195 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
- .debug_abbrev  0x00001583      0x237 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
- .debug_abbrev  0x000017ba      0x235 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
- .debug_abbrev  0x000019ef      0x2c0 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
- .debug_abbrev  0x00001caf      0x261 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
- .debug_abbrev  0x00001f10      0x29d CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
- .debug_abbrev  0x000021ad      0x23c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
- .debug_abbrev  0x000023e9      0x333 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
- .debug_abbrev  0x0000271c      0x223 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
- .debug_abbrev  0x0000293f      0x195 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
- .debug_abbrev  0x00002ad4      0x442 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
- .debug_abbrev  0x00002f16       0xf2 CMakeFiles/RS41HUP.elf.dir/util.c.obj
- .debug_abbrev  0x00003008      0x541 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
- .debug_abbrev  0x00003549      0x51d CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
- .debug_abbrev  0x00003a66       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
- .debug_abbrev  0x00003a8e       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
- .debug_abbrev  0x00003ab6       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
- .debug_abbrev  0x00003ade       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
- .debug_abbrev  0x00003b06       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
- .debug_abbrev  0x00003b2e       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
- .debug_abbrev  0x00003b56       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
- .debug_abbrev  0x00003b7e       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
- .debug_abbrev  0x00003ba6      0x47f /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
- .debug_abbrev  0x00004025       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(libunwind.o)
- .debug_abbrev  0x0000404d      0x2f9 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
- .debug_abbrev  0x00004346      0x1ea /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
- .debug_abbrev  0x00004530       0x78 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
- .debug_abbrev  0x000045a8       0x7b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
- .debug_abbrev  0x00004623      0x149 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-impure.o)
- .debug_abbrev  0x0000476c       0xb7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_abbrev  0x00004823      0x24a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .debug_abbrev  0x00004a6d      0x249 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
- .debug_abbrev  0x00004cb6       0xc3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memmove.o)
- .debug_abbrev  0x00004d79       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
- .debug_abbrev  0x00004da1      0x21d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fprintf.o)
- .debug_abbrev  0x00004fbe      0x20c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .debug_abbrev  0x000051ca      0x284 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_abbrev  0x0000544e      0x192 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mlock.o)
- .debug_abbrev  0x000055e0       0xc7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
- .debug_abbrev  0x000056a7      0x36e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_abbrev  0x00005a15      0x236 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
- .debug_abbrev  0x00005c4b      0x1da /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-sbrkr.o)
- .debug_abbrev  0x00005e25      0x196 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-msizer.o)
- .debug_abbrev  0x00005fbb      0x224 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
- .debug_abbrev  0x000061df      0x408 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
- .debug_abbrev  0x000065e7      0x2e1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
- .debug_abbrev  0x000068c8      0x19b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fwalk.o)
- .debug_abbrev  0x00006a63      0x1e2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
- .debug_abbrev  0x00006c45      0x1ee /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reent.o)
- .debug_abbrev  0x00006e33      0x29d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
- .debug_abbrev  0x000070d0      0x1b0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-isattyr.o)
- .debug_abbrev  0x00007280      0x224 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-stdio.o)
- .debug_abbrev  0x000074a4      0x1b0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-closer.o)
- .debug_abbrev  0x00007654      0x1b0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-readr.o)
- .debug_abbrev  0x00007804      0x1c3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fstatr.o)
- .debug_abbrev  0x000079c7      0x1c4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-lseekr.o)
- .debug_abbrev  0x00007b8b      0x1b5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
+ .debug_abbrev  0x00000b44      0x525 CMakeFiles/RS41HUP.elf.dir/main.c.obj
+ .debug_abbrev  0x00001069       0xcf CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
+ .debug_abbrev  0x00001138      0x2a0 CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+ .debug_abbrev  0x000013d8      0x195 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
+ .debug_abbrev  0x0000156d      0x237 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+ .debug_abbrev  0x000017a4      0x235 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
+ .debug_abbrev  0x000019d9      0x2c0 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
+ .debug_abbrev  0x00001c99      0x261 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
+ .debug_abbrev  0x00001efa      0x29d CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+ .debug_abbrev  0x00002197      0x23c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+ .debug_abbrev  0x000023d3      0x333 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+ .debug_abbrev  0x00002706      0x223 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+ .debug_abbrev  0x00002929      0x195 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+ .debug_abbrev  0x00002abe      0x442 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+ .debug_abbrev  0x00002f00       0xf2 CMakeFiles/RS41HUP.elf.dir/util.c.obj
+ .debug_abbrev  0x00002ff2      0x541 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+ .debug_abbrev  0x00003533      0x51d CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+ .debug_abbrev  0x00003a50       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_abbrev  0x00003a78       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_abbrev  0x00003aa0       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
+ .debug_abbrev  0x00003ac8       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_abbrev  0x00003af0       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_abbrev  0x00003b18       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .debug_abbrev  0x00003b40       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .debug_abbrev  0x00003b68       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .debug_abbrev  0x00003b90      0x47f /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
+ .debug_abbrev  0x0000400f       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(libunwind.o)
+ .debug_abbrev  0x00004037      0x2f9 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
+ .debug_abbrev  0x00004330      0x1ea /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
+ .debug_abbrev  0x0000451a       0x78 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
+ .debug_abbrev  0x00004592       0x7b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
+ .debug_abbrev  0x0000460d      0x149 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-impure.o)
+ .debug_abbrev  0x00004756       0xb7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_abbrev  0x0000480d      0x24a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_abbrev  0x00004a57      0x249 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_abbrev  0x00004ca0       0xc3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_abbrev  0x00004d63       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
+ .debug_abbrev  0x00004d8b      0x21d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fprintf.o)
+ .debug_abbrev  0x00004fa8      0x20c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_abbrev  0x000051b4      0x284 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_abbrev  0x00005438      0x192 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_abbrev  0x000055ca       0xc7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_abbrev  0x00005691      0x36e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_abbrev  0x000059ff      0x236 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
+ .debug_abbrev  0x00005c35      0x1da /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .debug_abbrev  0x00005e0f      0x196 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_abbrev  0x00005fa5      0x224 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+ .debug_abbrev  0x000061c9      0x408 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_abbrev  0x000065d1      0x2e1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
+ .debug_abbrev  0x000068b2      0x19b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fwalk.o)
+ .debug_abbrev  0x00006a4d      0x1e2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
+ .debug_abbrev  0x00006c2f      0x1ee /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_abbrev  0x00006e1d      0x29d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
+ .debug_abbrev  0x000070ba      0x1b0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-isattyr.o)
+ .debug_abbrev  0x0000726a      0x224 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-stdio.o)
+ .debug_abbrev  0x0000748e      0x1b0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-closer.o)
+ .debug_abbrev  0x0000763e      0x1b0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-readr.o)
+ .debug_abbrev  0x000077ee      0x1c3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fstatr.o)
+ .debug_abbrev  0x000079b1      0x1c4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-lseekr.o)
+ .debug_abbrev  0x00007b75      0x1b5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
 
 .debug_aranges  0x00000000     0x1350
  .debug_aranges
@@ -2220,7 +2221,7 @@ LOAD linker stubs
                 0x00001330       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
 
 .debug_rnglists
-                0x00000000     0x19fc
+                0x00000000     0x19fa
  .debug_rnglists
                 0x00000000       0x19 CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
  .debug_rnglists
@@ -2232,202 +2233,202 @@ LOAD linker stubs
  .debug_rnglists
                 0x000000c7       0x7e CMakeFiles/RS41HUP.elf.dir/init.c.obj
  .debug_rnglists
-                0x00000145       0xcb CMakeFiles/RS41HUP.elf.dir/main.c.obj
+                0x00000145       0xc9 CMakeFiles/RS41HUP.elf.dir/main.c.obj
  .debug_rnglists
-                0x00000210       0x1f CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
+                0x0000020e       0x1f CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
  .debug_rnglists
-                0x0000022f       0xdb CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+                0x0000022d       0xdb CMakeFiles/RS41HUP.elf.dir/radio.c.obj
  .debug_rnglists
-                0x0000030a       0x2b CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
+                0x00000308       0x2b CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
  .debug_rnglists
-                0x00000335       0xe6 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+                0x00000333       0xe6 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
  .debug_rnglists
-                0x0000041b       0x50 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
+                0x00000419       0x50 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
  .debug_rnglists
-                0x0000046b      0x72a CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
+                0x00000469      0x72a CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
  .debug_rnglists
-                0x00000b95       0x7b CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
+                0x00000b93       0x7b CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
  .debug_rnglists
-                0x00000c10       0xe6 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+                0x00000c0e       0xe6 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
  .debug_rnglists
-                0x00000cf6       0x98 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+                0x00000cf4       0x98 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
  .debug_rnglists
-                0x00000d8e      0x2c1 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+                0x00000d8c      0x2c1 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
  .debug_rnglists
-                0x0000104f       0xbd CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+                0x0000104d       0xbd CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
  .debug_rnglists
-                0x0000110c       0x43 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+                0x0000110a       0x43 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
  .debug_rnglists
-                0x0000114f      0x1c4 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+                0x0000114d      0x1c4 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
  .debug_rnglists
-                0x00001313       0x21 CMakeFiles/RS41HUP.elf.dir/util.c.obj
+                0x00001311       0x21 CMakeFiles/RS41HUP.elf.dir/util.c.obj
  .debug_rnglists
-                0x00001334      0x28c CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+                0x00001332      0x28c CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
  .debug_rnglists
-                0x000015c0      0x100 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+                0x000015be      0x100 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
  .debug_rnglists
-                0x000016c0       0xd1 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
+                0x000016be       0xd1 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
  .debug_rnglists
-                0x00001791       0x3a /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
+                0x0000178f       0x3a /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
  .debug_rnglists
-                0x000017cb       0x13 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
+                0x000017c9       0x13 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
  .debug_rnglists
-                0x000017de       0x14 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
+                0x000017dc       0x14 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
  .debug_rnglists
-                0x000017f2       0x1f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
+                0x000017f0       0x1f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
  .debug_rnglists
-                0x00001811       0x13 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
+                0x0000180f       0x13 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
  .debug_rnglists
-                0x00001824       0x66 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00001822       0x66 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
  .debug_rnglists
-                0x0000188a       0x1a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x00001888       0x1a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
  .debug_rnglists
-                0x000018a4       0x1b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
+                0x000018a2       0x1b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
  .debug_rnglists
-                0x000018bf       0x30 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+                0x000018bd       0x30 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
  .debug_rnglists
-                0x000018ef       0x7a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x000018ed       0x7a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
  .debug_rnglists
-                0x00001969       0x58 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
+                0x00001967       0x58 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
  .debug_rnglists
-                0x000019c1       0x1e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
+                0x000019bf       0x1e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
  .debug_rnglists
-                0x000019df       0x1d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
+                0x000019dd       0x1d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
 
-.debug_line     0x00000000    0x1630b
+.debug_line     0x00000000    0x16325
  .debug_line    0x00000000       0xdf CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
  .debug_line    0x000000df      0x257 CMakeFiles/RS41HUP.elf.dir/delay.c.obj
  .debug_line    0x00000336      0x131 CMakeFiles/RS41HUP.elf.dir/f_rtty.c.obj
  .debug_line    0x00000467      0xbd9 CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj
  .debug_line    0x00001040      0x77d CMakeFiles/RS41HUP.elf.dir/init.c.obj
- .debug_line    0x000017bd     0x1049 CMakeFiles/RS41HUP.elf.dir/main.c.obj
- .debug_line    0x00002806      0x20a CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
- .debug_line    0x00002a10      0x664 CMakeFiles/RS41HUP.elf.dir/radio.c.obj
- .debug_line    0x00003074      0x2ad CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
- .debug_line    0x00003321      0xa26 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
- .debug_line    0x00003d47      0x49e CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
- .debug_line    0x000041e5     0x1da4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
- .debug_line    0x00005f89     0x10f4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
- .debug_line    0x0000707d      0x90b CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
- .debug_line    0x00007988      0x70c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
- .debug_line    0x00008094     0x209c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
- .debug_line    0x0000a130      0x896 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
- .debug_line    0x0000a9c6      0x204 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
- .debug_line    0x0000abca     0x2913 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
- .debug_line    0x0000d4dd      0x5a8 CMakeFiles/RS41HUP.elf.dir/util.c.obj
- .debug_line    0x0000da85     0x123f CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
- .debug_line    0x0000ecc4      0x724 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
- .debug_line    0x0000f3e8      0x16f /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
- .debug_line    0x0000f557      0x184 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
- .debug_line    0x0000f6db       0x62 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
- .debug_line    0x0000f73d       0x5e /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
- .debug_line    0x0000f79b      0x103 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
- .debug_line    0x0000f89e      0x123 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
- .debug_line    0x0000f9c1       0x9a /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
- .debug_line    0x0000fa5b       0x5e /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
- .debug_line    0x0000fab9     0x1186 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
- .debug_line    0x00010c3f       0x97 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(libunwind.o)
- .debug_line    0x00010cd6      0x575 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
- .debug_line    0x0001124b      0x1b0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
- .debug_line    0x000113fb       0xf4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
- .debug_line    0x000114ef       0xb9 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
- .debug_line    0x000115a8       0xe7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-impure.o)
- .debug_line    0x0001168f      0x1b1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_line    0x00011840      0x45c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .debug_line    0x00011c9c      0x2c8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
- .debug_line    0x00011f64      0x20d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memmove.o)
- .debug_line    0x00012171       0xbd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
- .debug_line    0x0001222e      0x1ac /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fprintf.o)
- .debug_line    0x000123da      0x1fa /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .debug_line    0x000125d4      0x770 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_line    0x00012d44      0x153 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mlock.o)
- .debug_line    0x00012e97      0x200 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
- .debug_line    0x00013097      0x6b7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_line    0x0001374e      0x253 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
- .debug_line    0x000139a1      0x196 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-sbrkr.o)
- .debug_line    0x00013b37      0x176 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-msizer.o)
- .debug_line    0x00013cad      0x5f5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
- .debug_line    0x000142a2      0x51f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
- .debug_line    0x000147c1      0x456 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
- .debug_line    0x00014c17      0x1c9 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fwalk.o)
- .debug_line    0x00014de0      0x2bd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
- .debug_line    0x0001509d      0x27b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reent.o)
- .debug_line    0x00015318      0x3b0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
- .debug_line    0x000156c8      0x197 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-isattyr.o)
- .debug_line    0x0001585f      0x22b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-stdio.o)
- .debug_line    0x00015a8a      0x196 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-closer.o)
- .debug_line    0x00015c20      0x19c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-readr.o)
- .debug_line    0x00015dbc      0x215 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fstatr.o)
- .debug_line    0x00015fd1      0x19d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-lseekr.o)
- .debug_line    0x0001616e      0x19d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
+ .debug_line    0x000017bd     0x1063 CMakeFiles/RS41HUP.elf.dir/main.c.obj
+ .debug_line    0x00002820      0x20a CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
+ .debug_line    0x00002a2a      0x664 CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+ .debug_line    0x0000308e      0x2ad CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
+ .debug_line    0x0000333b      0xa26 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+ .debug_line    0x00003d61      0x49e CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
+ .debug_line    0x000041ff     0x1da4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
+ .debug_line    0x00005fa3     0x10f4 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
+ .debug_line    0x00007097      0x90b CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+ .debug_line    0x000079a2      0x70c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+ .debug_line    0x000080ae     0x209c CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+ .debug_line    0x0000a14a      0x896 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+ .debug_line    0x0000a9e0      0x204 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+ .debug_line    0x0000abe4     0x2913 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+ .debug_line    0x0000d4f7      0x5a8 CMakeFiles/RS41HUP.elf.dir/util.c.obj
+ .debug_line    0x0000da9f     0x123f CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+ .debug_line    0x0000ecde      0x724 CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+ .debug_line    0x0000f402      0x16f /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_line    0x0000f571      0x184 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_line    0x0000f6f5       0x62 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
+ .debug_line    0x0000f757       0x5e /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_line    0x0000f7b5      0x103 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_line    0x0000f8b8      0x123 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .debug_line    0x0000f9db       0x9a /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .debug_line    0x0000fa75       0x5e /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .debug_line    0x0000fad3     0x1186 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
+ .debug_line    0x00010c59       0x97 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(libunwind.o)
+ .debug_line    0x00010cf0      0x575 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
+ .debug_line    0x00011265      0x1b0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
+ .debug_line    0x00011415       0xf4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
+ .debug_line    0x00011509       0xb9 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
+ .debug_line    0x000115c2       0xe7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-impure.o)
+ .debug_line    0x000116a9      0x1b1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_line    0x0001185a      0x45c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_line    0x00011cb6      0x2c8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_line    0x00011f7e      0x20d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_line    0x0001218b       0xbd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
+ .debug_line    0x00012248      0x1ac /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fprintf.o)
+ .debug_line    0x000123f4      0x1fa /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_line    0x000125ee      0x770 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_line    0x00012d5e      0x153 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_line    0x00012eb1      0x200 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_line    0x000130b1      0x6b7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_line    0x00013768      0x253 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
+ .debug_line    0x000139bb      0x196 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .debug_line    0x00013b51      0x176 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_line    0x00013cc7      0x5f5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+ .debug_line    0x000142bc      0x51f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_line    0x000147db      0x456 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
+ .debug_line    0x00014c31      0x1c9 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fwalk.o)
+ .debug_line    0x00014dfa      0x2bd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
+ .debug_line    0x000150b7      0x27b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_line    0x00015332      0x3b0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
+ .debug_line    0x000156e2      0x197 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-isattyr.o)
+ .debug_line    0x00015879      0x22b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-stdio.o)
+ .debug_line    0x00015aa4      0x196 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-closer.o)
+ .debug_line    0x00015c3a      0x19c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-readr.o)
+ .debug_line    0x00015dd6      0x215 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fstatr.o)
+ .debug_line    0x00015feb      0x19d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-lseekr.o)
+ .debug_line    0x00016188      0x19d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
 
-.debug_str      0x00000000     0x769b
- .debug_str     0x00000000     0x769b CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
+.debug_str      0x00000000     0x76a9
+ .debug_str     0x00000000     0x76a9 CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
                                 0x1a1 (size before relaxing)
- .debug_str     0x0000769b      0x737 CMakeFiles/RS41HUP.elf.dir/delay.c.obj
- .debug_str     0x0000769b      0x1cc CMakeFiles/RS41HUP.elf.dir/f_rtty.c.obj
- .debug_str     0x0000769b      0x397 CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj
- .debug_str     0x0000769b      0xedb CMakeFiles/RS41HUP.elf.dir/init.c.obj
- .debug_str     0x0000769b      0xc25 CMakeFiles/RS41HUP.elf.dir/main.c.obj
- .debug_str     0x0000769b      0x1ac CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
- .debug_str     0x0000769b      0x3ea CMakeFiles/RS41HUP.elf.dir/radio.c.obj
- .debug_str     0x0000769b      0x3bf CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
- .debug_str     0x0000769b      0x708 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
- .debug_str     0x0000769b      0x3b7 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
- .debug_str     0x0000769b      0x5de CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
- .debug_str     0x0000769b      0x526 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
- .debug_str     0x0000769b      0x663 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
- .debug_str     0x0000769b      0x633 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
- .debug_str     0x0000769b      0xe01 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
- .debug_str     0x0000769b      0x6c6 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
- .debug_str     0x0000769b      0x321 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
- .debug_str     0x0000769b      0x873 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
- .debug_str     0x0000769b      0x1c6 CMakeFiles/RS41HUP.elf.dir/util.c.obj
- .debug_str     0x0000769b      0xcf2 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
- .debug_str     0x0000769b     0x175d CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
- .debug_str     0x0000769b      0x150 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
- .debug_str     0x0000769b       0xd0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
- .debug_str     0x0000769b       0xbb /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
- .debug_str     0x0000769b       0xbf /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
- .debug_str     0x0000769b      0x144 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
- .debug_str     0x0000769b       0xd0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
- .debug_str     0x0000769b      0x159 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
- .debug_str     0x0000769b       0xbf /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
- .debug_str     0x0000769b      0xc5d /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
- .debug_str     0x0000769b      0x1a1 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(libunwind.o)
- .debug_str     0x0000769b      0x5a3 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
- .debug_str     0x0000769b      0x4ed /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
- .debug_str     0x0000769b      0x19b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
- .debug_str     0x0000769b      0x18f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
- .debug_str     0x0000769b      0x4b4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-impure.o)
- .debug_str     0x0000769b      0x1a5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_str     0x0000769b      0x595 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .debug_str     0x0000769b      0x534 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
- .debug_str     0x0000769b      0x1c4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memmove.o)
- .debug_str     0x0000769b       0xa8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
- .debug_str     0x0000769b      0x4f2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fprintf.o)
- .debug_str     0x0000769b      0x52a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .debug_str     0x0000769b      0x793 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_str     0x0000769b      0x4d2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mlock.o)
- .debug_str     0x0000769b      0x1b5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
- .debug_str     0x0000769b      0x821 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_str     0x0000769b      0x4ea /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
- .debug_str     0x0000769b      0x4bd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-sbrkr.o)
- .debug_str     0x0000769b      0x4fd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-msizer.o)
- .debug_str     0x0000769b      0x558 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
- .debug_str     0x0000769b      0x6b7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
- .debug_str     0x0000769b      0x53b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
- .debug_str     0x0000769b      0x4c4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fwalk.o)
- .debug_str     0x0000769b      0x4e5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
- .debug_str     0x0000769b      0x4d3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reent.o)
- .debug_str     0x0000769b      0x647 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
- .debug_str     0x0000769b      0x4b4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-isattyr.o)
- .debug_str     0x0000769b      0x521 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-stdio.o)
- .debug_str     0x0000769b      0x4aa /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-closer.o)
- .debug_str     0x0000769b      0x4b8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-readr.o)
- .debug_str     0x0000769b      0x5fc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fstatr.o)
- .debug_str     0x0000769b      0x4b8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-lseekr.o)
- .debug_str     0x0000769b      0x4ba /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
+ .debug_str     0x000076a9      0x737 CMakeFiles/RS41HUP.elf.dir/delay.c.obj
+ .debug_str     0x000076a9      0x1cc CMakeFiles/RS41HUP.elf.dir/f_rtty.c.obj
+ .debug_str     0x000076a9      0x397 CMakeFiles/RS41HUP.elf.dir/horus_l2.c.obj
+ .debug_str     0x000076a9      0xedb CMakeFiles/RS41HUP.elf.dir/init.c.obj
+ .debug_str     0x000076a9      0xc33 CMakeFiles/RS41HUP.elf.dir/main.c.obj
+ .debug_str     0x000076a9      0x1ac CMakeFiles/RS41HUP.elf.dir/mfsk.c.obj
+ .debug_str     0x000076a9      0x3ea CMakeFiles/RS41HUP.elf.dir/radio.c.obj
+ .debug_str     0x000076a9      0x3bf CMakeFiles/RS41HUP.elf.dir/stm_lib/src/misc.c.obj
+ .debug_str     0x000076a9      0x708 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_adc.c.obj
+ .debug_str     0x000076a9      0x3b7 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_dma.c.obj
+ .debug_str     0x000076a9      0x5de CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_flash.c.obj
+ .debug_str     0x000076a9      0x526 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_gpio.c.obj
+ .debug_str     0x000076a9      0x663 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_rcc.c.obj
+ .debug_str     0x000076a9      0x633 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_spi.c.obj
+ .debug_str     0x000076a9      0xe01 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_tim.c.obj
+ .debug_str     0x000076a9      0x6c6 CMakeFiles/RS41HUP.elf.dir/stm_lib/src/stm32f10x_usart.c.obj
+ .debug_str     0x000076a9      0x321 CMakeFiles/RS41HUP.elf.dir/syscalls/syscalls.c.obj
+ .debug_str     0x000076a9      0x873 CMakeFiles/RS41HUP.elf.dir/ublox.c.obj
+ .debug_str     0x000076a9      0x1c6 CMakeFiles/RS41HUP.elf.dir/util.c.obj
+ .debug_str     0x000076a9      0xcf2 CMakeFiles/RS41HUP.elf.dir/QAPRSBase.cpp.obj
+ .debug_str     0x000076a9     0x175d CMakeFiles/RS41HUP.elf.dir/aprs.cpp.obj
+ .debug_str     0x000076a9      0x150 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_str     0x000076a9       0xd0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_str     0x000076a9       0xbb /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
+ .debug_str     0x000076a9       0xbf /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_str     0x000076a9      0x144 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_str     0x000076a9       0xd0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .debug_str     0x000076a9      0x159 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .debug_str     0x000076a9       0xbf /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .debug_str     0x000076a9      0xc5d /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(unwind-arm.o)
+ .debug_str     0x000076a9      0x1a1 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(libunwind.o)
+ .debug_str     0x000076a9      0x5a3 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a(pr-support.o)
+ .debug_str     0x000076a9      0x4ed /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-assert.o)
+ .debug_str     0x000076a9      0x19b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strlen-stub.o)
+ .debug_str     0x000076a9      0x18f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-strcpy.o)
+ .debug_str     0x000076a9      0x4b4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-impure.o)
+ .debug_str     0x000076a9      0x1a5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_str     0x000076a9      0x595 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_str     0x000076a9      0x534 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_str     0x000076a9      0x1c4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_str     0x000076a9       0xa8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memcpy.o)
+ .debug_str     0x000076a9      0x4f2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fprintf.o)
+ .debug_str     0x000076a9      0x52a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_str     0x000076a9      0x793 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_str     0x000076a9      0x4d2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_str     0x000076a9      0x1b5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_str     0x000076a9      0x821 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_str     0x000076a9      0x4ea /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wbuf.o)
+ .debug_str     0x000076a9      0x4bd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .debug_str     0x000076a9      0x4fd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_str     0x000076a9      0x558 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+ .debug_str     0x000076a9      0x6b7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_str     0x000076a9      0x53b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fflush.o)
+ .debug_str     0x000076a9      0x4c4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fwalk.o)
+ .debug_str     0x000076a9      0x4e5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-wsetup.o)
+ .debug_str     0x000076a9      0x4d3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_str     0x000076a9      0x647 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-makebuf.o)
+ .debug_str     0x000076a9      0x4b4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-isattyr.o)
+ .debug_str     0x000076a9      0x521 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-stdio.o)
+ .debug_str     0x000076a9      0x4aa /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-closer.o)
+ .debug_str     0x000076a9      0x4b8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-readr.o)
+ .debug_str     0x000076a9      0x5fc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-fstatr.o)
+ .debug_str     0x000076a9      0x4b8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-lseekr.o)
+ .debug_str     0x000076a9      0x4ba /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a(libc_a-writer.o)
 
 .comment        0x00000000       0x26
  .comment       0x00000000       0x26 CMakeFiles/RS41HUP.elf.dir/cmsis_boot/startup/startup_stm32f10x_md_vl.c.obj
